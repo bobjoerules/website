@@ -42,7 +42,7 @@ div:nth-child(2){
 }
 div:nth-child(3){
     height: 400px;
-    background-image: url(img/_D.jpeg);
+    background-image: url(img/D.jpeg);
     background-attachment: fixed;
     background-size: cover;
 }
