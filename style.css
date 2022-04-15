@@ -34,7 +34,7 @@ h2{
 div:nth-child(1){
     background-image: url(img/oksssssssssssssss.png);
     background-size: cover;
-   background-position: center;
+    background-position-x: center;
 
 }
 div:nth-child(2){
