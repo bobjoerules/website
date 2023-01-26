@@ -21,7 +21,9 @@ div{
     background: white; 
     border-radius: 10px;
 }
-
+h1{
+    color:white;
+}
 h2{
     font-size: 60px;
     background: white;
@@ -59,28 +61,23 @@ div:nth-child(2){
     height: 400px;
     background-color:rgb(0, 179, 255);
 }
-div:nth-child(3){
+div:nth-child(4){
     height: 400px;
     background-image: url(img/D.jpeg);
     background-attachment: fixed;
     background-size: cover;
 }
-div:nth-child(4){
+div:nth-child(5){
     background-color:rgb(43, 43, 43);
 }
-div:nth-child(5){
+div:nth-child(3){
+    text-align: center;
+    flex-direction: column;
     background-image: url(img/bbground.jpeg);
     background-size:contain;
    background-position: center;
    
 }
-div:nth-child(6){
-    height: 10000px;
-}
-div:nth-child(8){
-    height: 20000px;
-}
-
 
 a:link {
     color: white;
