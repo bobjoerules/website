@@ -71,8 +71,8 @@ div:nth-child(5){
     background-color:rgb(43, 43, 43);
 }
 div:nth-child(3){
-    text-align: center;
     flex-direction: column;
+    text-align: center;
     background-image: url(img/bbground.jpeg);
     background-size:contain;
    background-position: center;
