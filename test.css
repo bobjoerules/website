@@ -1057,15 +1057,15 @@ body::after {
 	z-index: 1;
 	pointer-events: none;
 }
-.backgroundFlash-1X5jVs .cozyMessage-1DWF9U::before {
-	left: calc(-80px * var(--usechatbubbles));
-}
+/*.backgroundFlash-1X5jVs .cozyMessage-1DWF9U::before {
+	left: calc(-80px * var(--usechatbubbles));*/
+/*}
 .message-2CShn3.ephemeral-2nDdnn,							/* message				localbot							*/
-.message-2CShn3.replying-eZ7p5z {							/* message				replying							*/
-	background-image: linear-gradient(rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
+/*.message-2CShn3.replying-eZ7p5z {							/* message				replying							*/
+/*	background-image: linear-gradient(rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
 }
 .message-2CShn3.mentioned-Tre-dv {							/* message				mentioned							*/
-	background-image: linear-gradient(rgba(var(--mentioncolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
+/*	background-image: linear-gradient(rgba(var(--mentioncolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
 }
 .message-2CShn3.ephemeral-2nDdnn::before,
 .message-2CShn3.replying-eZ7p5z::before {
@@ -1077,7 +1077,7 @@ body::after {
 .message-2CShn3.mentioned-Tre-dv .contents-2MsGLg .messageContent-2t3eCI {
 	border-radius: 3px;
 	background-color: rgba(var(--mentioncolor), calc(0.3 * var(--usechatbubbles)));
-}
+}*/
 #app-mount .avatar-2e8lTP,									/* message				container avatar					*/
 #app-mount .avatar-l9Txm5 {									/* message				loading avatar						*/
 	position: absolute;
