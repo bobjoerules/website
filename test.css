@@ -793,61 +793,6 @@ body::after {
 
 /* ~~~~		6.		CHAT							~~~~ */
 
-.chat-2ZfjoI.threadSidebarOpen-1LSXvU {						/* chat					threadsidebar open					*/
-	border-radius: 0;
-}
-#app-mount .background-fkKrXt .container-2Hi7Km,
-#app-mount .background-fkKrXt .container-xwOzwi,
-#app-mount .background-fkKrXt .container-3rZ3XA,
-#app-mount .background-fkKrXt .icon-2IDTxf,
-#app-mount .background-fkKrXt .containerCard-2kwJKN,
-#app-mount .background-fkKrXt .containerCard-2kwJKN:hover,
-#app-mount .background-fkKrXt .interactiveCard-2iMtdk,
-#app-mount .background-fkKrXt .emptyStateContainer-xWOMPJ,
-#app-mount .background-fkKrXt .card-3x20HF,
-#app-mount .container-3wLKDe .mainCard-3KBsBI,
-#app-mount .container-3wLKDe .sidebarCard-1Gn1ch,
-#app-mount .container-2IKOsH .channelRow-4X_3fi {
-	background-color: var(--background-secondary);
-}
-@media (max-width: 1300px) {
-	.container-xwOzwi,
-	.container-3rZ3XA {
-		background: none !important;
-	}
-}
-#app-mount .background-fkKrXt .containerCard-2kwJKN {
-	border-color: var(--background-secondary);
-}
-#app-mount .background-fkKrXt .container-3HMTms:hover,
-#app-mount .container-3wLKDe .pill-3pRQlO,
-#app-mount .container-2IKOsH .channelRow-4X_3fi:hover {
-	background: var(--background-tertiary);
-}
-.contentPreview-3fWiuC {									/* forum list			item								*/
-	border-color: rgb(var(--transparencycolor));
-}
-#app-mount .textContentFooter-2JnNv8 {						/* forum list			item footer							*/
-	background: linear-gradient(0deg, rgba(var(--transparencycolor), .5), rgba(var(--transparencycolor), .1));
-}
-.container-3YcgdM {											
-	border-color: var(--background-floating);
-}
-.divider-AZrXIA {											/* forum				fat divider							*/
-	background: var(--background-floating);
-}
-#app-mount .container-2qVG6q.isOpen-2OXbFs {				/* forum				selected post						*/
-	background-color: rgb(var(--accentcolor));
-    text-shadow: 1px 1px var(--textshadow);
-}
-#app-mount .container-2qVG6q.isOpen-2OXbFs .defaultColor-24IHKz,
-#app-mount .container-2qVG6q.isOpen-2OXbFs [style*="color: var(--header-secondary)"] {
-	color: var(--header-primary) !important;
-}
-#app-mount .container-2qVG6q.isOpen-2OXbFs .author-22H8ZU a,
-#app-mount .container-2qVG6q.isOpen-2OXbFs [style*="color: var(--text-muted)"] {
-	color: var(--header-secondary) !important;
-}
 
 /* ----		6.1.	CHANNELHEADER					---- */
 
