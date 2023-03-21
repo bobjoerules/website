@@ -5,7 +5,6 @@
 	--transparencycolor:			0,0,0;
 	--transparencyalpha:			0.15;
 	--messagetransparency:			0.5;
-	--usechatbubbles: 				calc(var(--messagetransparency) / (var(--messagetransparency) + 0.00000000000000000000001));
 	--guildchanneltransparency:		0.15;
 	--chatinputtransparency:		0.0;
 	--memberlisttransparency:		0.0;
@@ -938,9 +937,7 @@ body::after {
 	background-color: var(--text-normal) !important;
 }
 
-.divider-2rZFJK.hasContent-31hcsn {							/* divider				hascontent							*/
-	border-width: calc(1px * (1 - var(--usechatbubbles)));
-}
+
 .divider-2rZFJK.hasContent-31hcsn::before {
 	content: "";
 	position: absolute;
@@ -959,18 +956,6 @@ body::after {
 	padding: 2px 8px;
 	width: unset;
 }
-.content-3spvdd::before,
-.content-3spvdd::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	pointer-events: none;
-	opacity: calc(1 - var(--usechatbubbles));
-	z-index: -1;
-}
 .content-3spvdd::before {
 	background: var(--background) var(--backgroundposition)/var(--backgroundsize);
 	background-attachment: fixed;
@@ -979,13 +964,7 @@ body::after {
 	background-color: rgba(var(--transparencycolor), var(--transparencyalpha));
 	backdrop-filter: blur(var(--backgroundblur));
 }
-.unreadPill-3nEWYM {										/* divider				unreadpill							*/
-	border-radius: calc(4px * var(--usechatbubbles)) 4px 4px calc(4px * var(--usechatbubbles));
-	padding-left: calc(4px * var(--usechatbubbles) + 1px * (1 - var(--usechatbubbles)));
-}
-.unreadPillCap-2-iI4h {										/* divider				unreadpillcap						*/
-	opacity: calc(1 - var(--usechatbubbles));
-}
+
 
 .hasMore-2mIMwb:hover {
 	background-color: rgba(var(--transparencycolor), .2);
@@ -1040,9 +1019,6 @@ body::after {
 .mouse-mode .message-2CShn3:hover,
 .mouse-mode.full-motion .message-2CShn3:hover,
 .mouse-mode .wrapper-15CKyy:hover,
-.mouse-mode.full-motion .wrapper-15CKyy:hover {
-	background-color: rgba(var(--transparencycolor), calc(var(--messagetransparency) * 1.2 * var(--usechatbubbles) + 0.3 * (1 - var(--usechatbubbles)))) !important;
-}
 .backgroundFlash-1X5jVs .message-2CShn3 {					/* message				jump flash							*/
 	position: relative;
 }
@@ -1057,87 +1033,26 @@ body::after {
 	z-index: 1;
 	pointer-events: none;
 }
-/*.backgroundFlash-1X5jVs .cozyMessage-1DWF9U::before {
-	left: calc(-80px * var(--usechatbubbles));*/
-/*}
-.message-2CShn3.ephemeral-2nDdnn,							/* message				localbot							*/
-/*.message-2CShn3.replying-eZ7p5z {							/* message				replying							*/
-/*	background-image: linear-gradient(rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
-}
-.message-2CShn3.mentioned-Tre-dv {							/* message				mentioned							*/
-/*	background-image: linear-gradient(rgba(var(--mentioncolor), calc(0.2 * (1 - var(--usechatbubbles)))), rgba(var(--accentcolor), calc(0.2 * (1 - var(--usechatbubbles)))));
-}
-.message-2CShn3.ephemeral-2nDdnn::before,
-.message-2CShn3.replying-eZ7p5z::before {
-	background-color: rgb(var(--accentcolor));
-}
-.message-2CShn3.mentioned-Tre-dv::before {
-	background-color: rgb(var(--mentioncolor));
-}
-.message-2CShn3.mentioned-Tre-dv .contents-2MsGLg .messageContent-2t3eCI {
-	border-radius: 3px;
-	background-color: rgba(var(--mentioncolor), calc(0.3 * var(--usechatbubbles)));
-}*/
-#app-mount .avatar-2e8lTP,									/* message				container avatar					*/
-#app-mount .avatar-l9Txm5 {									/* message				loading avatar						*/
-	position: absolute;
-	top: 2px;
-	left: calc(-70px * var(--usechatbubbles) + 16px);
-}
+
+
 #app-mount .messageItemBody-2EpHAK.hasReply-2Cr4KE .avatar-2e8lTP,
 #app-mount .repliedMessage-3Z6XBG ~ * .avatar-2e8lTP {
 	top: 24px;
 }
-#app-mount .container-3FojY8 .avatar-2e8lTP {
-	left: calc(-10px * var(--usechatbubbles));
-}
-#app-mount .avatarDecoration-34OC0G {						/* message				avatar decoration					*/
-	position: absolute;
-	top: 2px;
-	left: calc(-70px * var(--usechatbubbles) + 16px - (6.6666666px * var(--decoration-to-avatar-ratio)/2));
-}
+
 #app-mount .messageItemBody-2EpHAK.hasReply-2Cr4KE .avatarDecoration-34OC0G,
 #app-mount .repliedMessage-3Z6XBG ~ * .avatarDecoration-34OC0G {
 	top: 24px;
-}
-#app-mount .container-3FojY8 .avatarDecoration-34OC0G {
-	left: calc(-10px * var(--usechatbubbles) - (6.6666666px * var(--decoration-to-avatar-ratio)/2));
 }
 
 #app-mount .replyBadge-LMm_Ic {								/* message				reply badge							*/
 	background-color: rgba(var(--transparencycolor), .5);
 }
-#app-mount .spine-3OoQS_ {
-	width: 0px;
-	top: 20px;
-	right: calc(1px * (-32 * var(--usechatbubbles) + -25 * (1 - var(--usechatbubbles))));
-	left: unset;
-	border: none;
-}
+
 #app-mount .compact-2Nkcau .spine-3OoQS_ {
 	right: 0;
 }
-#app-mount .repliedMessage-3Z6XBG::before,					/* message				reply spine							*/
-#app-mount .repliedMessage-3Z6XBG::after,
-#app-mount .spine-3OoQS_::before,							/* message				command spine						*/
-#app-mount .spine-3OoQS_::after {
-	--avatar-size: 38px;
-	--gutter: 16px;
-	--spine-width: 2px;
-	content: "";
-	display: block;
-	position: absolute;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	top: 50%;
-	right: unset;
-	bottom: 0;
-	left: calc(-1 * var(--avatar-size) - (6px * var(--usechatbubbles)));
-	width: calc(var(--avatar-size) - 4px);
-	margin: calc(-1 * var(--spine-width)/2) var(--reply-spacing) calc(.125rem - 4px) calc(-1 * var(--spine-width)/2);
-	border-right: 0 solid var(--background-accent);
-	border-left: var(--spine-width) solid var(--background-accent);
-}
+
 #app-mount .repliedMessage-3Z6XBG::before,
 #app-mount .repliedMessage-3Z6XBG::after {
 	border-top: var(--spine-width) solid var(--background-accent);
@@ -1157,14 +1072,6 @@ body::after {
 	--avatar-size: 20px;
 	left: calc(-1 * var(--avatar-size));
 }
-#app-mount .repliedMessage-3Z6XBG::before,
-#app-mount .spine-3OoQS_::before {
-	border-color: rgba(var(--textbrighter), calc(0.3 * (1 - var(--usechatbubbles))));
-}
-#app-mount .repliedMessage-3Z6XBG::after,
-#app-mount .spine-3OoQS_::after {
-	border-color: rgba(var(--transparencycolor), calc(0.5 * var(--usechatbubbles)));
-}
 #app-mount .compact-2Nkcau .repliedMessage-3Z6XBG::before,
 #app-mount .compact-2Nkcau .spine-3OoQS_::before {
 	border-color: rgba(var(--textbrighter), .3);
@@ -1174,32 +1081,7 @@ body::after {
 	border-color: transparent;
 }
 
-#app-mount .cozy-VmLDNB.hasThread-3h-KJV::before,			/* message				thread spine						*/
-#app-mount .cozy-VmLDNB.hasThread-3h-KJV::after,
-#app-mount .compact-2Nkcau.hasThread-3h-KJV::after {
-	--avatar-size: 38px;
-	--gutter: 16px;
-	--spine-width: 2px;
-	content: "";
-	display: block;
-	position: absolute;
-	top: 2rem;
-	bottom: 29px;
-	left: calc(var(--avatar-size) * (1 - var(--usechatbubbles)) - var(--avatar-size) * var(--usechatbubbles));
-	width: calc(var(--avatar-size) - 10px + (4px * var(--usechatbubbles)));
-	margin: calc(-1 * var(--spine-width)/2) var(--reply-spacing) calc(.125rem - 4px) calc(-1 * var(--spine-width)/2);
-	border-top: 0 solid var(--background-accent);
-	border-right: 0 solid var(--background-accent);
-	border-bottom: var(--spine-width) solid var(--background-accent);
-	border-left: var(--spine-width) solid var(--background-accent);
-	border-bottom-left-radius: 8px;
-}
-#app-mount .cozy-VmLDNB.hasThread-3h-KJV::before {
-	border-color: rgba(var(--textbrighter), calc(0.3 * (1 - var(--usechatbubbles))));
-}
-#app-mount .cozy-VmLDNB.hasThread-3h-KJV::after {
-	border-color: rgba(var(--transparencycolor), calc(0.5 * var(--usechatbubbles)));
-}
+
 #app-mount .message-2CShn3.mentioned-Tre-dv.hasThread-3h-KJV::before {
 	background-color: transparent;
 }
@@ -1241,19 +1123,8 @@ body::after {
 .message-24k8JL .wrapper-30-Nkg .header-2jRmjb::after {
 	border-right-color: rgba(var(--transparencycolor), calc(var(--messagetransparency) * 0.8));
 }
-.cozy-VmLDNB .timestamp-p1Df1m.alt-1dvXnH {
-	left: calc(-78px * var(--usechatbubbles));
-}
-.cozy-VmLDNB .iconContainer-2rPbqG {
-	background-color: rgba(var(--transparencycolor), var(--messagetransparency));
-	border-radius: 50%;
-	left: calc(1px * (-58 * var(--usechatbubbles) + -48 * (1 - var(--usechatbubbles))));
-	height: 25px !important;
-	width: 25px !important;
-	margin: unset;
-	margin-right: 1rem;
-	padding: 0;
-}
+
+
 .cozy-VmLDNB .blockedSystemMessage-3FmE9n .iconContainer-2rPbqG {
 	background-color: transparent;
 }
@@ -1297,13 +1168,7 @@ body::after {
 	padding: 0;
 	overflow: visible;
 }
-#app-mount .cozyMessage-1DWF9U,								/* message				container cozy						*/
-#app-mount .messagesWrapper-RpOMA3 .cozy-VmLDNB,			/* message				upload placeholder cozy				*/
-#app-mount .card-3x20HF .cozy-VmLDNB,						/* message				home cozy							*/
-#app-mount .cozy-3hKWhq {									/* message				loading cozy						*/
-	margin-left: calc(80px * var(--usechatbubbles));
-	padding-left: calc(1px * (10 * var(--usechatbubbles) + 72 * (1 - var(--usechatbubbles))));
-}
+
 #app-mount .wrapper-30-Nkg[data-list-item-id*="Uploader"] {
 	margin-top: 1rem;
 }
@@ -1315,15 +1180,6 @@ body::after {
 #app-mount .cozy-3hKWhq .header-35u4WP {
 	margin-left: 0;
 	padding-left: 0;
-}
-.messageContainer-3VTXBC .wrapper-30-Nkg,
-.messages-23can0 .wrapper-30-Nkg,
-.message-G6O-Wv .wrapper-30-Nkg,
-.messageGroupWrapper-1jf_7C .messageGroupCozy-3v_RqN,
-.message-24k8JL .wrapper-30-Nkg {
-	border-radius: 5px;
-	margin-left: calc(60px * var(--usechatbubbles));
-	padding-left: calc(1px * (10 * var(--usechatbubbles) + 72 * (1 - var(--usechatbubbles))));
 }
 .messages-23can0 .wrapper-30-Nkg {
 	border-radius: 0;
@@ -6450,14 +6306,7 @@ img[src="/assets/cef02719c12d8aaf38894c16dca7fbe6.svg"] {	/* rolesettings			addr
 #app-mount .markDash-1ATsxA::after {
 	top: 30px;
 }
-#app-mount .bubble-3we2di {									/* slider				bubble								*/
-	background-color: rgb(var(--accentcolor));
-	color: #fff;
-	text-shadow: 1px 1px var(--textshadow);
-}
-#app-mount .bubble-3we2di::before {
-	border-top-color: rgb(var(--accentcolor));
-}
+
 
 #app-mount .container-30qY7E {								/* hotkeyinput			container							*/
 	background-color: rgba(var(--transparencycolor), .1);
