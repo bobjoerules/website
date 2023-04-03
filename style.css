@@ -81,11 +81,6 @@ div:nth-child(3){
    background-position: center;
    
 }
-div:nth-child(6){
-    background-image: url(img/Bobjoerules Animation Character Sheet.jpeg);
-    background-size: cover;
-    background-position-x: center;
-}
 a:link {
     color: white;
     background-color: transparent;
