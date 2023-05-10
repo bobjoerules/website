@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+  *{
+    font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  ::-webkit-scrollbar {
+    background: black;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  button{
+    background-color: #111111;
+    border-style: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  button:hover{
+    background-color: white;
+    color: black;
+  }
+
+</style>
+<body>
+
+<h1>Rock paper scissor</h1>
+<h2>A simple game</h2>
+
+<button id="button" onclick="myFunction()">Play</button>
+
+<p id="play"></p>
+<h2 id="status"></h2>
+<p style="position: absolute; bottom: 0; right: 0">© Bobjoerules 2023</p>
+<script>
+function myFunction() {
+  let person = prompt("Choose wisely").toLowerCase() ;
+  if (person === 'rock' || person === 'paper' || person === 'scissors') {
+    var seed = (Math.floor(Math.random() * 1000) % 3)
+    console.log(seed)
+    if (seed === 0){
+    var answer = ('rock')
+    }
+    if (seed === 1){
+        var answer = ('paper')
+    }
+    if (seed === 2){
+        var answer = ('scissors')
+    }
+    
+    document.getElementById("play").innerHTML =
+    "You played \"" + person +"\" and the bot played \""+ answer +"\"";
+
+    if (answer === person) {
+      document.getElementById("status").style.color = "yellow";
+      document.getElementById("status").innerHTML = 'You tied with the bot due to using the same thing.'
+    }else if (answer === 'rock' && person === 'paper') {
+      document.getElementById("status").style.color = "green";
+      document.getElementById("status").innerHTML = 'You won! Paper beats Rock'
+    }else if (answer === 'paper' && person === 'scissors') {
+      document.getElementById("status").style.color = "green";
+      document.getElementById("status").innerHTML = 'You won! Scissors beats Paper.'
+    }else if (answer === 'scissors' && person === 'rock') {
+      document.getElementById("status").style.color = "green";
+      document.getElementById("status").innerHTML = 'You won! Rock beats Scissors.'
+    }else if (answer === 'rock' && person === 'scissors') {
+      document.getElementById("status").style.color = "red";
+      document.getElementById("status").innerHTML = 'You lose! Rock beats Scissors.'
+    }else if (answer === 'paper' && person === 'rock') {
+      document.getElementById("status").style.color = "red";
+      document.getElementById("status").innerHTML = 'You lose! Paper beats Rock'
+    }else if (answer === 'scissors' && person === 'paper') {
+      document.getElementById("status").style.color = "red";
+      document.getElementById("status").innerHTML = 'You lose! Scissors beats Paper.'
+    }
+
+  }else{
+    document.getElementById("play").innerHTML = 'You inserted an invailed response of \"' + person +"\""
+    document.getElementById("status").style.color = "red";
+    document.getElementById("status").innerHTML = 'No game played'
+  }
+}
+</script>
+
+</body>
+</html>
