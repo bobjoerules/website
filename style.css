@@ -43,7 +43,9 @@ h2{
     bottom: 0;
     z-index: -1;
 }
-
+#lols{
+height: 100%;
+}
 #balls{
     font-size: 30px;
 }
