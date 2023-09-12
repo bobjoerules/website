@@ -5,3 +5,7 @@ window.addEventListener("scroll", function(){
     parallax.style.backgroundPositionY = offset * 0.7 + 'px';
     lols.style.backgroundPositionY = offset * 2 + 'px';
 })
+const allElements = document.querySelectorAll('*');
+allElements.forEach(element => {
+    element.draggable = false;
+});

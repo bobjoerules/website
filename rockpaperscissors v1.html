@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
 </head>
 <style>
@@ -36,17 +36,17 @@
 </style>
 <body>
 
-<h1>Rock paper scissor</h1>
-<h2>A simple game</h2>
+<h1 draggable="false">Rock paper scissor</h1>
+<h2 draggable="false">A simple game</h2>
 
-<button id="button" onclick="myFunction()">Play</button>
+<button id="button" onclick="myFunction()" draggable="false">Play</button>
 
-<p id="play"></p>
-<h2 id="status"></h2>
-<p style="position: absolute; bottom: 0; right: 0">© Bobjoerules 2023</p>
+<p id="play" draggable="false"></p>
+<h2 id="status" draggable="false"></h2>
+<p style="position: absolute; bottom: 0; right: 0" draggable="false">© Bobjoerules 2023</p>
 <script>
 function myFunction() {
-  let person = prompt("Choose wisely").toLowerCase() ;
+  let person = prompt("Choose wisely (Rock/Paper/Scissors)").toLowerCase() ;
   if (person === 'rock' || person === 'paper' || person === 'scissors') {
     var seed = (Math.floor(Math.random() * 1000) % 3)
     console.log(seed)
