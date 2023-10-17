@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Rock Paper Scissors, Bobjoerules, game">
+    <meta name="description" content="A quick game of Rock Paper Scissors">
+    <meta name="author" content="Bobjoerules">
+    <link rel="shortcut icon" href="../img/rps.ico" type="image/x-icon">
+    <title>French Practice</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+  body{
+    background: linear-gradient(to top, black, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  *{
+    font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+  }
+  ::-webkit-scrollbar {
+    background: black;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  button{
+    background-color: #111111;
+    border-style: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  button:hover{
+    background-color: white;
+    color: black;
+  }
+
+</style>
+<body>
+<audio id="correct">
+  <source src="sounds/correct.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="wrong">
+  <source src="sounds/wrong.mp3" type="audio/mpeg">
+</audio>
+<h1 style="position: absolute; top: calc(50% - 100px); left: 50%; transform: translate(-50%, -50%);">
+  Test your French Vocab!!!
+</h1>
+<button style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" id="button" onclick="myFunction()" draggable="false">Next question</button>
+<h2 style="position: absolute; top: calc(50% + 50px); left: 50%; transform: translate(-50%, -50%);" id="play" draggable="false"></h2>
+<p style="position: absolute; bottom: 0; right: 0" draggable="false">© Bobjoerules 2023</p>
+<script>
+function myFunction() {
+  let x = document.getElementById("correct");
+  x.pause();
+  let l = document.getElementById("wrong");
+  x.pause();
+  var questions = ["adapter", "adapt", "agrandir", "extend"];
+  var number = Math.floor(Math.random() * questions.length);
+  var answers = ["adapt", "adapter", "extend", "agrandir"];
+  var question = questions[number]
+  var answer = answers[number];
+  function checkOddOrEven(n) { 
+    if (n & 1 == 1) { 
+      return "odd"; 
+    }
+    return "even"; 
+  }
+  if (checkOddOrEven(number) === 'odd') {
+    let input = prompt("What does \"" + question + "\" mean in french?").toLowerCase() ;
+    console.log(input)
+    if (input === answer) {   
+      let x = document.getElementById("correct");
+      x.play();
+      document.body.style.background = "linear-gradient(to top, black, green)";
+      document.getElementById("play").innerHTML = "Correct! " + question + " is "+ answer +" in french.";
+      document.getElementById("play").style.color = "green";
+      document.body.style.backgroundAttachment = 'fixed';
+      console.log('correct')
+    }else{
+      let l = document.getElementById("wrong");
+      l.play();
+      document.getElementById("play").innerHTML = 'Wrong! The right answer is \"' + answer +"\""
+      document.getElementById("play").style.color = "red";
+      document.body.style.background = "linear-gradient(to top, black, red)";
+      document.body.style.backgroundAttachment = 'fixed';
+
+      console.log('false')
+    }
+  }
+  if (checkOddOrEven(number) === 'even') {
+    let input = prompt("What does \"" + question + "\" mean in english?").toLowerCase() ;
+    console.log(input)
+    if (input === answer) {   
+      let x = document.getElementById("correct");
+      x.play();
+      document.body.style.background = "linear-gradient(to top, black, green)";
+      document.getElementById("play").innerHTML = "Correct! " + question + " is "+ answer +" in english.";
+      document.getElementById("play").style.color = "green";
+      document.body.style.backgroundAttachment = 'fixed';
+      console.log('correct')
+    }else{
+      let l = document.getElementById("wrong");
+      l.play();
+      document.getElementById("play").innerHTML = 'Wrong! The right answer is \"' + answer +"\""
+      document.body.style.background = "linear-gradient(to top, black, red)";
+      document.getElementById("play").style.color = "red";
+      document.body.style.backgroundAttachment = 'fixed';
+      console.log('false')
+    }
+  }
+}
+</script>
+</body>
+</html>
