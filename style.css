@@ -27,7 +27,6 @@ h1{
 }
 h2{
     font-size: 60px;
-    background: white;
     padding: 8px 24px;
     border-radius: 16px;
 }
@@ -76,10 +75,19 @@ div:nth-child(4){
     background-image: url(img/D.jpeg);
     background-attachment: fixed;
     background-size: cover;
+    background-position-x: center;
+}
+@media (max-width: 500px) {
+    div:nth-child(4){
+        background-attachment: initial;
+        
+    }
 }
 div:nth-child(5){
     height: 100vh;
-    background-color:rgb(43, 43, 43);
+    background-image: url(img/Artboard\ 1.png);
+    background-color: #111111;
+    color:white
 }
 
 div:nth-child(3){
