@@ -80,7 +80,6 @@ div:nth-child(4){
 @media (max-width: 500px) {
     div:nth-child(4){
         background-attachment: initial;
-        
     }
 }
 div:nth-child(5){
@@ -89,7 +88,6 @@ div:nth-child(5){
     background-color: #111111;
     color:white;
     text-align: center;
-    
     background-position-x: center;
     flex-direction: column;
     flex-wrap: wrap;
