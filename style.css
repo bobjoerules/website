@@ -43,12 +43,17 @@ h2{
     z-index: -1;
 }
 #lols{
-height: 100%;
+display: inline-block;
+padding: 125px 0 0 0;
 }
 #balls{
     font-size: 4vw;
 }
-
+@media screen and (min-width: 900px) {
+    #balls {
+       font-size: 30px;
+    }
+}
 #h33{
     padding: 100px 100px;
     font-size: 60px;
@@ -71,7 +76,6 @@ div:nth-child(4){
     background-image: url(img/D.jpeg);
     background-attachment: fixed;
     background-size: cover;
-    background-width: 100%;
 }
 div:nth-child(5){
     height: 100vh;
@@ -83,8 +87,9 @@ div:nth-child(3){
     flex-wrap: wrap;
     text-align: center;
     background-image: url(img/bbground.jpeg);
-    background-size:contain;
+    background-size: 50%;
    background-position: center;
+   height: 500px;
    
 }
 a:link {
@@ -104,3 +109,30 @@ a:hover {
     background-color: transparent;
     text-decoration: underline;
 }
+.socials{
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+}
+.socials1{
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+    border-color: white;
+    border-radius: 20px;
+    border:solid;
+}
+.socials:hover{
+filter: grayscale(100%);
+transform: scale(125%);
+}
+.social-icons {
+    display:block;
+    position: fixed;
+    bottom:50px;
+    height:25px;
+    text-align: right;
+    right: 10px;
+}
+.socials1:hover{
+    filter: grayscale(100%);
+    transform: scale(125%);
+    }
