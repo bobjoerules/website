@@ -70,18 +70,10 @@ div:nth-child(2){
     background-color:rgb(0, 179, 255);
 }
 div:nth-child(4){
-    font-size:5vw;
-    height: 400px;
-    background-image: url(img/D.jpeg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position-x: center;
+    background-image: none;
+    height: 0px;
 }
-@media (max-width: 500px) {
-    div:nth-child(4){
-        background-attachment: initial;
-    }
-}
+
 div:nth-child(5){
     height: 100vh;
     background-image: url(img/Artboard\ 1.png);
