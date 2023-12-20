@@ -8,15 +8,20 @@
     <meta name="description" content="A quick game of Rock Paper Scissors">
     <meta name="author" content="Bobjoerules">
     <link rel="shortcut icon" href="../img/rps.ico" type="image/x-icon">
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock, Paper, Scissors v1</title>
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
   *{
     font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
     color: white;
     text-align: center;
+  }
+  body{
+    background-color: black;
+    background: linear-gradient(to top, black, #181818);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   ::-webkit-scrollbar {
     background: black;
@@ -29,6 +34,7 @@
   button{
     background-color: #111111;
     border-style: solid;
+    border-radius: 20px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -44,7 +50,7 @@
 </style>
 <body>
 
-<h1 draggable="false">Rock, Paper, Scissors</h1>
+<h1 draggable="false">Rock, Paper, Scissors v1</h1>
 <h2 draggable="false">A simple game</h2>
 
 <button id="button" onclick="myFunction()" draggable="false">Play</button>
