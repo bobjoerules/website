@@ -138,13 +138,13 @@ function myFunction() {
     var percent = (Number(sessionStorage.right)/Number(sessionStorage.played)) * 100
     document.getElementById("percent").innerHTML = percent + "%";
     if (Number(percent) > 74) {
-      document.getElementById("play").style.color = "green";
+      document.getElementById("percent").style.color = "green";
     }else if(Number(percent) > 49){
-      document.getElementById("play").style.color = "yellow";
+      document.getElementById("percent").style.color = "yellow";
     }else if(Number(percent) > 24){
-      document.getElementById("play").style.color = "orange";
+      document.getElementById("percent").style.color = "orange";
     }else{
-      document.getElementById("play").style.color = "red";
+      document.getElementById("percent").style.color = "red";
     }
   }
 }
