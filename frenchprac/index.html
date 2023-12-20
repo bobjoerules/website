@@ -76,6 +76,7 @@ function myFunction() {
   l.pause();
   var type = Math.floor(Math.random() * 2);
   console.log(type)
+  let input;
   if (type === 0){
     var questions = ["adapter", "adapt", "agrandir", "extend"];
     var number = Math.floor(Math.random() * questions.length);
@@ -88,11 +89,10 @@ function myFunction() {
       }
       return "even"; 
     }
-    let input;
     if (checkOddOrEven(number) === 'odd') {
-      input = prompt("What does \"" + question + "\" mean in french?").toLowerCase() ;
+      input = prompt("How do you say \"" + question + "\" in french?").toLowerCase() ;
     } else if (checkOddOrEven(number) === 'even') {
-      input = prompt("What does \"" + question + "\" mean in english?").toLowerCase() ;
+      input = prompt("How do you say \"" + question + "\" in english?").toLowerCase() ;
     }
     if (input === answer) {   
       x.play();
@@ -115,7 +115,7 @@ function myFunction() {
       document.body.style.backgroundAttachment = 'fixed';
     }
   }else if(type === 1){
-    console.log('soon')
+    sessionStorage.right = Number(sessionStorage.right) + 1;
   }
   if (typeof(Storage) !== "undefined") {
     sessionStorage.played = Number(sessionStorage.played) + 1;
