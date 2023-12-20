@@ -137,7 +137,15 @@ function myFunction() {
     sessionStorage.played = Number(sessionStorage.played) + 1;
     var percent = (Number(sessionStorage.right)/Number(sessionStorage.played)) * 100
     document.getElementById("percent").innerHTML = percent + "%";
-
+    if (Number(percent) > 74) {
+      document.getElementById("play").style.color = "green";
+    }else if(Number(percent) > 49){
+      document.getElementById("play").style.color = "yellow";
+    }else if(Number(percent) > 24){
+      document.getElementById("play").style.color = "orange";
+    }else{
+      document.getElementById("play").style.color = "red";
+    }
   }
 }
 </script>
