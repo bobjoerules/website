@@ -73,65 +73,49 @@ function myFunction() {
   let x = document.getElementById("correct");
   x.pause();
   let l = document.getElementById("wrong");
-  x.pause();
-  var questions = ["adapter", "adapt", "agrandir", "extend"];
-  var number = Math.floor(Math.random() * questions.length);
-  var answers = ["adapt", "adapter", "extend", "agrandir"];
-  var question = questions[number]
-  var answer = answers[number];
-  function checkOddOrEven(n) { 
-    if (n & 1 == 1) { 
-      return "odd"; 
+  l.pause();
+  var type = Math.floor(Math.random() * 2);
+  console.log(type)
+  if (type === 0){
+    var questions = ["adapter", "adapt", "agrandir", "extend"];
+    var number = Math.floor(Math.random() * questions.length);
+    var answers = ["adapt", "adapter", "extend", "agrandir"];
+    var question = questions[number]
+    var answer = answers[number];
+    function checkOddOrEven(n) { 
+      if (n & 1 == 1) { 
+        return "odd"; 
+      }
+      return "even"; 
     }
-    return "even"; 
-  }
-  if (checkOddOrEven(number) === 'odd') {
-    let input = prompt("What does \"" + question + "\" mean in french?").toLowerCase() ;
-    console.log(input)
+    let input;
+    if (checkOddOrEven(number) === 'odd') {
+      input = prompt("What does \"" + question + "\" mean in french?").toLowerCase() ;
+    } else if (checkOddOrEven(number) === 'even') {
+      input = prompt("What does \"" + question + "\" mean in english?").toLowerCase() ;
+    }
     if (input === answer) {   
-      let x = document.getElementById("correct");
       x.play();
       document.body.style.background = "linear-gradient(to top, black, green)";
-      document.getElementById("play").innerHTML = "Correct! " + question + " is "+ answer +" in french.";
+      if (checkOddOrEven(number) === 'odd') {
+        document.getElementById("play").innerHTML = "Correct! " + question + " is "+ answer +" in french.";
+      } else if (checkOddOrEven(number) === 'even') {
+        document.getElementById("play").innerHTML = "Correct! " + question + " is "+ answer +" in english.";
+      }
       document.getElementById("play").style.color = "green";
       document.body.style.backgroundAttachment = 'fixed';
-      console.log('correct')
       if (typeof(Storage) !== "undefined") {
         sessionStorage.right = Number(sessionStorage.right) + 1;
       }
     }else{
-      let l = document.getElementById("wrong");
       l.play();
       document.getElementById("play").innerHTML = 'Wrong! The right answer is \"' + answer +"\""
       document.getElementById("play").style.color = "red";
       document.body.style.background = "linear-gradient(to top, black, red)";
       document.body.style.backgroundAttachment = 'fixed';
-      console.log('false')
     }
-  }
-  if (checkOddOrEven(number) === 'even') {
-    let input = prompt("What does \"" + question + "\" mean in english?").toLowerCase() ;
-    console.log(input)
-    if (input === answer) {   
-      let x = document.getElementById("correct");
-      x.play();
-      document.body.style.background = "linear-gradient(to top, black, green)";
-      document.getElementById("play").innerHTML = "Correct! " + question + " is "+ answer +" in english.";
-      document.getElementById("play").style.color = "green";
-      document.body.style.backgroundAttachment = 'fixed';
-      console.log('correct')
-      if (typeof(Storage) !== "undefined") {
-        sessionStorage.right = Number(sessionStorage.right) + 1;
-      }
-    }else{
-      let l = document.getElementById("wrong");
-      l.play();
-      document.getElementById("play").innerHTML = 'Wrong! The right answer is \"' + answer +"\""
-      document.body.style.background = "linear-gradient(to top, black, red)";
-      document.getElementById("play").style.color = "red";
-      document.body.style.backgroundAttachment = 'fixed';
-      console.log('false')
-    }
+  }else if(type === 1){
+    console.log('soon')
   }
   if (typeof(Storage) !== "undefined") {
     sessionStorage.played = Number(sessionStorage.played) + 1;
