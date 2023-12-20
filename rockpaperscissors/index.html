@@ -57,13 +57,19 @@
 
 <p id="play" draggable="false"></p>
 <h2 id="status" draggable="false"></h2>
+<h2 id="score" draggable="false"></h2>
 <p style="position: absolute; bottom: 0; right: 0" draggable="false">© Bobjoerules 2023</p>
 <script>
 function myFunction() {
+  if (typeof(Storage) !== "undefined") {
+    if (isNaN(localStorage.lose)) {
+      localStorage.lose = 0; 
+      localStorage.win = 0; 
+    }
+  }
   let person = prompt("Choose wisely (Rock/Paper/Scissors)").toLowerCase() ;
   if (person === 'rock' || person === 'paper' || person === 'scissors') {
     var seed = (Math.floor(Math.random() * 1000) % 3)
-    console.log(seed)
     if (seed === 0){
     var answer = ('rock')
     }
@@ -73,7 +79,6 @@ function myFunction() {
     if (seed === 2){
         var answer = ('scissors')
     }
-    
     document.getElementById("play").innerHTML =
     "You played \"" + person +"\" and the bot played \""+ answer +"\"";
 
@@ -83,23 +88,56 @@ function myFunction() {
     }else if (answer === 'rock' && person === 'paper') {
       document.getElementById("status").style.color = "green";
       document.getElementById("status").innerHTML = 'You won! Paper beats Rock'
+      if (typeof(Storage) !== "undefined") {
+        localStorage.win = Number(localStorage.win) + 1;
+        console.log(localStorage.lose)
+      }
     }else if (answer === 'paper' && person === 'scissors') {
       document.getElementById("status").style.color = "green";
       document.getElementById("status").innerHTML = 'You won! Scissors beats Paper.'
+      if (typeof(Storage) !== "undefined") {
+        localStorage.win = Number(localStorage.win) + 1;
+        console.log(localStorage.lose)
+      }
     }else if (answer === 'scissors' && person === 'rock') {
       document.getElementById("status").style.color = "green";
       document.getElementById("status").innerHTML = 'You won! Rock beats Scissors.'
+      if (typeof(Storage) !== "undefined") {
+        localStorage.win = Number(localStorage.win) + 1;
+        console.log(localStorage.lose)
+      }
     }else if (answer === 'rock' && person === 'scissors') {
       document.getElementById("status").style.color = "red";
       document.getElementById("status").innerHTML = 'You lose! Rock beats Scissors.'
+      if (typeof(Storage) !== "undefined") {
+        localStorage.lose = Number(localStorage.lose) + 1;
+        console.log(localStorage.lose)
+      }
     }else if (answer === 'paper' && person === 'rock') {
       document.getElementById("status").style.color = "red";
       document.getElementById("status").innerHTML = 'You lose! Paper beats Rock'
+      if (typeof(Storage) !== "undefined") {
+        localStorage.lose = Number(localStorage.lose) + 1;
+        console.log(localStorage.lose)
+      }
     }else if (answer === 'scissors' && person === 'paper') {
       document.getElementById("status").style.color = "red";
       document.getElementById("status").innerHTML = 'You lose! Scissors beats Paper.'
+      if (typeof(Storage) !== "undefined") {
+        localStorage.lose = Number(localStorage.lose) + 1;
+        console.log(localStorage.lose)
+      }
     }
-
+    if (typeof(Storage) !== "undefined") {
+      document.getElementById("score").innerHTML = localStorage.win +'/'+ localStorage.lose;
+      if (Number(localStorage.win) > Number(localStorage.lose)){
+        document.getElementById("score").style.color = "green";
+      } else if (Number(localStorage.win) < Number(localStorage.lose)) {
+        document.getElementById("score").style.color = "red";
+      }else{
+        document.getElementById("score").style.color = "yellow";
+      }
+    }
   }else{
     document.getElementById("play").innerHTML = 'You inserted an invailed response of \"' + person +"\""
     document.getElementById("status").style.color = "red";
