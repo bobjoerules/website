@@ -60,9 +60,16 @@
 </h1>
 <button style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" id="button" onclick="myFunction()" draggable="false">Next question</button>
 <h2 style="position: absolute; top: calc(50% + 50px); left: 50%; transform: translate(-50%, -50%);" id="play" draggable="false"></h2>
+<h2 style="position: absolute; top: calc(50% + 100px); left: 50%; transform: translate(-50%, -50%);" id="percent" draggable="false"></h2>
 <p style="position: absolute; bottom: 0; right: 0" draggable="false">© Bobjoerules 2023</p>
 <script>
 function myFunction() {
+  if (typeof(Storage) !== "undefined") {
+    if (isNaN(sessionStorage.right)) {
+      sessionStorage.right = 0; 
+      sessionStorage.played = 0; 
+    }
+  }
   let x = document.getElementById("correct");
   x.pause();
   let l = document.getElementById("wrong");
@@ -89,6 +96,9 @@ function myFunction() {
       document.getElementById("play").style.color = "green";
       document.body.style.backgroundAttachment = 'fixed';
       console.log('correct')
+      if (typeof(Storage) !== "undefined") {
+        sessionStorage.right = Number(sessionStorage.right) + 1;
+      }
     }else{
       let l = document.getElementById("wrong");
       l.play();
@@ -96,7 +106,6 @@ function myFunction() {
       document.getElementById("play").style.color = "red";
       document.body.style.background = "linear-gradient(to top, black, red)";
       document.body.style.backgroundAttachment = 'fixed';
-
       console.log('false')
     }
   }
@@ -111,6 +120,9 @@ function myFunction() {
       document.getElementById("play").style.color = "green";
       document.body.style.backgroundAttachment = 'fixed';
       console.log('correct')
+      if (typeof(Storage) !== "undefined") {
+        sessionStorage.right = Number(sessionStorage.right) + 1;
+      }
     }else{
       let l = document.getElementById("wrong");
       l.play();
@@ -120,6 +132,12 @@ function myFunction() {
       document.body.style.backgroundAttachment = 'fixed';
       console.log('false')
     }
+  }
+  if (typeof(Storage) !== "undefined") {
+    sessionStorage.played = Number(sessionStorage.played) + 1;
+    var percent = (Number(sessionStorage.right)/Number(sessionStorage.played)) * 100
+    document.getElementById("percent").innerHTML = percent + "%";
+
   }
 }
 </script>
