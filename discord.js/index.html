@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord.js examples</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            background-color: #181818;
+            padding: 2%;
+            width: fit-content;
+            display:inline-block;
+        }
+        code {
+            font-family: Consolas,"courier new";
+            font-size: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="slide" direction="up" scrollamount="50" style="display:inline-block;" >
+        <div>
+        <code>
+        if (interaction.commandName === 'help') {<br>
+            &emsp;const helpCommand = new EmbedBuilder();<br>
+            &emsp;helpCommand.setColor('Blue')<br>
+            &emsp;helpCommand.setTitle('Bot commands:')<br>
+            &emsp;helpCommand.addFields(<br>
+            &emsp;&emsp;{ name: '· /setdescription', value: `change the description of the channel`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /renamechannel', value: `change the channel's name`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /channeldelete', value: `delete the channel`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /channelpurge', value: `deletes everything in channel by cloning the Channel`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /clonechannel', value: `clones the channel and asks for a new name`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /help', value: `this command`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /ping', value: `sends important information about the bot like uptime and latency`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /randomchannel', value: `sends link to a random text channel in the server`, inline: false },<br>
+            &emsp;&emsp;{ name: '· /setnsfw', value: `sets the channel NSFW or sets the channel not NSFW`, inline: false },<br>
+            &emsp;&emsp;{ name: 'Commands coming soon', value: brokenCommands.toString()||'none', inline: false }<br>
+            &emsp;)<br>
+            &emsp;interaction.reply({ embeds: [helpCommand] , ephemeral: false })<br>
+            &emsp;return <br>
+        }
+        </code>
+        </div>
+        <img dblockisplay="inline-" width="25%" src="images/help.png" alt="help command example">
+    </marquee>
+    
+</body>
+</html>

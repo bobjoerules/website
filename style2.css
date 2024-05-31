@@ -1,0 +1,32 @@
+.social-icons {
+    display: block;
+    white-space: nowrap;
+    position: fixed;
+    top: 50%;
+    height: 25px;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1{
+    font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    position: fixed;
+    top: -500%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    text-decoration: underline;
+}
+.socials1{
+    border:solid;
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+    border-color: white;
+    border-radius: 20px;
+}
+.socials1:hover{
+    filter:opacity(50%);
+    transform: scale(125%);
+}
