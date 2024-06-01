@@ -1,5 +1,4 @@
 .social-icons {
-    display: block;
     white-space: nowrap;
     position: fixed;
     top: 50%;
@@ -7,6 +6,10 @@
     transform: translateY(-50%);
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap; /* This makes the items wrap to the next line */
+    justify-content: center;
+    width: 90%;
 }
 h1{
     font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;

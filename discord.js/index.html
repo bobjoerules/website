@@ -7,47 +7,64 @@
     <style>
         body {
             background-color: black;
+            color: white;
+            font-family: Consolas, "courier new";
         }
-        div {
-            background-color: #181818;
+        .container {
+            display: flex;
+            align-items: center;
             padding: 2%;
             width: fit-content;
-            display:inline-block;
+            margin: 0 auto;
+            animation: slide-up 1s ease-in-out;
+        }
+        .color {
+            background-color: #181818;
+            margin-right: 20px;
         }
         code {
-            font-family: Consolas,"courier new";
             font-size: 10px;
-            color: white;
+            margin-right: 20px;
+        }
+        img {
+            width: 25%;
+        }
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <marquee behavior="slide" direction="up" scrollamount="50" style="display:inline-block;" >
-        <div>
-        <code>
-        if (interaction.commandName === 'help') {<br>
-            &emsp;const helpCommand = new EmbedBuilder();<br>
-            &emsp;helpCommand.setColor('Blue')<br>
-            &emsp;helpCommand.setTitle('Bot commands:')<br>
-            &emsp;helpCommand.addFields(<br>
-            &emsp;&emsp;{ name: '· /setdescription', value: `change the description of the channel`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /renamechannel', value: `change the channel's name`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /channeldelete', value: `delete the channel`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /channelpurge', value: `deletes everything in channel by cloning the Channel`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /clonechannel', value: `clones the channel and asks for a new name`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /help', value: `this command`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /ping', value: `sends important information about the bot like uptime and latency`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /randomchannel', value: `sends link to a random text channel in the server`, inline: false },<br>
-            &emsp;&emsp;{ name: '· /setnsfw', value: `sets the channel NSFW or sets the channel not NSFW`, inline: false },<br>
-            &emsp;&emsp;{ name: 'Commands coming soon', value: brokenCommands.toString()||'none', inline: false }<br>
-            &emsp;)<br>
-            &emsp;interaction.reply({ embeds: [helpCommand] , ephemeral: false })<br>
-            &emsp;return <br>
-        }
-        </code>
+    <div class="container">
+        <div class="color">
+            <code>
+                if (interaction.commandName === 'help') {<br>
+                    &emsp;const helpCommand = new EmbedBuilder();<br>
+                    &emsp;helpCommand.setColor('Blue')<br>
+                    &emsp;helpCommand.setTitle('Bot commands:')<br>
+                    &emsp;helpCommand.addFields(<br>
+                    &emsp;&emsp;{ name: '· /setdescription', value: `change the description of the channel`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /renamechannel', value: `change the channel's name`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /channeldelete', value: `delete the channel`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /channelpurge', value: `deletes everything in channel by cloning the Channel`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /clonechannel', value: `clones the channel and asks for a new name`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /help', value: `this command`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /ping', value: `sends important information about the bot like uptime and latency`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /randomchannel', value: `sends link to a random text channel in the server`, inline: false },<br>
+                    &emsp;&emsp;{ name: '· /setnsfw', value: `sets the channel NSFW or sets the channel not NSFW`, inline: false },<br>
+                    &emsp;&emsp;{ name: 'Commands coming soon', value: brokenCommands.toString()||'none', inline: false }<br>
+                    &emsp;)<br>
+                    &emsp;interaction.reply({ embeds: [helpCommand] , ephemeral: false })<br>
+                    &emsp;return <br>
+                }
+            </code>
         </div>
-        <img dblockisplay="inline-" width="25%" src="images/help.png" alt="help command example">
-    </marquee>
-    
+        <img src="images/help.png" alt="help command example">
+    </div>
 </body>
 </html>
