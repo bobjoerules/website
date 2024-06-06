@@ -4,7 +4,6 @@
     padding:0;
     margin:0;
 }
-
 div{
     display: flex;
     align-items: center;
@@ -13,7 +12,6 @@ div{
     font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
-
 ::-webkit-scrollbar {
     background: black;
     width: 10px;
@@ -42,8 +40,8 @@ h2{
     z-index: -1;
 }
 #lols{
-display: inline-block;
-padding: 125px 0 0 0;
+    display: inline-block;
+    padding: 125px 0 0 0;
 }
 #balls{
     font-size: 4vw;
@@ -91,8 +89,8 @@ div:nth-child(3){
     text-align: center;
     background-image: url(img/bbground.jpeg);
     background-size: 50%;
-   background-position: center;
-   height: 500px;
+    background-position: center;
+    height: 500px;
    
 }
 a:link {
@@ -124,8 +122,8 @@ a:hover {
     border:solid;
 }
 .socials:hover{
-filter: grayscale(100%);
-transform: scale(125%);
+    filter: grayscale(100%);
+    transform: scale(125%);
 }
 .social-icons {
     display:block;
@@ -136,6 +134,6 @@ transform: scale(125%);
     right: 10px;
 }
 .socials1:hover{
-    filter: grayscale(100%);
+    border-color: rgb(0, 179, 255);
     transform: scale(125%);
 }
