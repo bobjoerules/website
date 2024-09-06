@@ -121,7 +121,7 @@ a:hover {
     border-radius: 20px;
     border:solid;
     background-color: rgba(0,0,0,.5);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
 }
 .socials:hover{
     filter: grayscale(100%);
