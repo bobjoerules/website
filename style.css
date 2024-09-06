@@ -120,6 +120,8 @@ a:hover {
     border-color: white;
     border-radius: 20px;
     border:solid;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(100px);
 }
 .socials:hover{
     filter: grayscale(100%);
@@ -135,5 +137,5 @@ a:hover {
 }
 .socials1:hover{
     border-color: rgb(0, 179, 255);
-    transform: scale(125%);
+    transform: scale(120%);
 }
