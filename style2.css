@@ -30,6 +30,6 @@ h1{
     border-radius: 20px;
 }
 .socials1:hover{
-    filter:opacity(50%);
+    filter: blur(1px);
     transform: scale(125%);
 }
