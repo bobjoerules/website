@@ -3,6 +3,7 @@
     position: fixed;
     top: 50%;
     height: 25px;
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
     transform: translateX(-50%);
