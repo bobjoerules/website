@@ -62,7 +62,7 @@ h2{
     background-image: url(controller313.png);
     background-size: cover;
     background-position-x: center;
-    backdrop-filter: blur(10px);
+    filter: blur(10px);
 }
 #balls{
     height: 400px;
