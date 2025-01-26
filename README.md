@@ -1,4 +1,4 @@
-# aboutme-
+# ME on a Good Day
 
-A website with alittle Information about me!!!
-https://bobjoerules.github.io/aboutme-/
+A website with da Information about me!!!
+https://bobjoerules.github.io/
