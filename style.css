@@ -59,10 +59,9 @@ h2{
 
 #parallax{
     height: 100vh;
-    background-image: url(controller313.png);
+    background-image: url(cool.png);
     background-size: cover;
     background-position-x: center;
-    filter: blur(10px);
 }
 #balls{
     height: 400px;
