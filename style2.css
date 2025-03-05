@@ -1,27 +1,36 @@
 .social-icons {
     white-space: nowrap;
-    position: fixed;
+    position: absolute;
     top: 50%;
-    height: 25px;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     display: flex;
-    flex-wrap: wrap; /* This makes the items wrap to the next line */
+    flex-wrap: wrap; 
     justify-content: center;
     width: 90%;
 }
-h1{
+
+h1 {
     font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    position: fixed;
-    top: -500%;
-    transform: translateY(-50%);
+    position: absolute;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 50px;
     text-decoration: underline;
+}
+
+.socials1{
+    border:solid;
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+    border-color: white;
+    border-radius: 20px;
+}
+.socials1:hover{
+    filter: blur(1px);
+    transform: scale(125%);
 }
 .socials1{
     border:solid;
