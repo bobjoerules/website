@@ -5,20 +5,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     width: 90%;
+    padding-top: 80px;
 }
 
 h1 {
     font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 50px;
     text-decoration: underline;
+    text-align: center;
+    width: 100%;
 }
 
 .socials1{
