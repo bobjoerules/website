@@ -15,15 +15,6 @@
             height: 100%;
             background-image: radial-gradient(79.75% 134.25% at 95.71% 100%, #000b6b 0, #0057b8 100%);
         }
-        .social-icons{
-            position: relative;
-            height: 500px;
-            width: 300px;
-        }
-        .social-icons a {
-            position: absolute;
-            left: 10px;
-        }
     </style>
 </head>
 <body style="background-color:black;">
@@ -44,14 +35,5 @@
             <a style="padding-right: 10px;" href="https://bsky.app/profile/bobjoerules.bsky.social" title="Bluesky"><img class="socials1" src="../img/bluesky.png" alt="Bluesky Icon" style="width:60px;height:60px;"></a> 
         </div>
     <script src="main.js"></script>
-    <script>
-      const containerHeight = 500;
-      const links = document.querySelectorAll('#linkContainer a');
-    
-      links.forEach(link => {
-        const randomTop = Math.floor(Math.random() * (containerHeight - 20));
-        link.style.top = `${randomTop}px`;
-      });
-    </script>
 </body>
 </html>
