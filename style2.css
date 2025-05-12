@@ -46,3 +46,30 @@ h1 {
     filter: blur(1px);
     transform: scale(125%);
 }
+
+
+
+
+.socials2{
+    border:solid;
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+    border-color: white;
+    border-radius: 20px;
+    padding-top: 80px;
+}
+.socials2:hover{
+    filter: blur(1px);
+    transform: scale(125%);
+}
+.socials2{
+    border:solid;
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+    border-color: white;
+    border-radius: 20px;
+}
+.socials2:hover{
+    filter: blur(1px);
+    transform: scale(125%);
+}
