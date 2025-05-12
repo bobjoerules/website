@@ -35,5 +35,14 @@
             <a style="padding-right: 10px; padding-top: 80px;" href="https://bsky.app/profile/bobjoerules.bsky.social" title="Bluesky"><img class="socials2" src="../img/bluesky.png" alt="Bluesky Icon" style="width:60px;height:60px;"></a> 
         </div>
     <script src="main.js"></script>
+    <script>
+        document.addEventListener("mousemove", (e) => {
+        const div = document.querySelector(".social-icons");
+        const x = (e.clientX / window.innerWidth - 0.5) * 20;
+        const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+        div.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+    });
+    </script>
 </body>
 </html>
