@@ -1,6 +1,5 @@
 html, body {
     background-image: radial-gradient(79.75% 134.25% at 95.71% 100%, #000b6b 0, #0057b8 100%);
-    transform: translateZ(0);
 }
 .social-icons {
     white-space: nowrap;
