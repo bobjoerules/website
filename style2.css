@@ -56,7 +56,6 @@ h1 {
     transform-origin: center;
     border-color: white;
     border-radius: 20px;
-    padding-top: 80px;
 }
 .socials2:hover{
     filter: blur(1px);
