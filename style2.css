@@ -10,6 +10,18 @@
     width: 90%;
     padding-top: 80px;
 }
+.social-icons2 {
+    white-space: nowrap;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-10%, -10%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    padding-top: 50px;
+}
 
 h1 {
     font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
