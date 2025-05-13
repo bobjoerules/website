@@ -40,17 +40,30 @@
     </div>
     <script src="main.js"></script>
     <script>
-        document.addEventListener("mousemove", (e) => {
+        document.addEventListener("DOMContentLoaded", () => {
         const div = document.querySelector(".social-icons");
+        const div2 = document.querySelector(".social-icons2");
+
+        if (div) {
+        div.style.transform = `translate(-50%, -50%) translate(0px, 0px)`;
+        }
+        if (div2) {
+        div2.style.transform = `translate(-50%, -50%) translate(0px, 0px)`;
+        }
+        document.addEventListener("mousemove", (e) => {
         const x = (e.clientX / window.innerWidth - 0.5) * 20;
         const y = (e.clientY / window.innerHeight - 0.5) * 20;
-        const div2 = document.querySelector(".social-icons2");
-        const x2 = (e.clientX / window.innerWidth - 0.5) * -20;
-        const y2 = (e.clientY / window.innerHeight - 0.5) * -20;
+        const x2 = -x;
+        const y2 = -y;
 
-        div.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
-        div2.style.transform = `translate(-50%, -50%) translate(${x2}px, ${y2}px)`;
-    });
+        if (div) {
+            div.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+        }
+        if (div2) {
+            div2.style.transform = `translate(-50%, -50%) translate(${x2}px, ${y2}px)`;
+        }
+        });
+        });
     </script>
 </body>
 </html>
