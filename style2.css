@@ -39,10 +39,8 @@ h1 {
 }
 
 .socials1{
-    border:solid;
     transition: transform .1s ease-in-out;
     transform-origin: center;
-    border-color: white;
     border-radius: 20px;
 }
 .socials1:hover{
@@ -50,10 +48,8 @@ h1 {
     transform: scale(125%);
 }
 .socials1{
-    border:solid;
     transition: transform .1s ease-in-out;
     transform-origin: center;
-    border-color: white;
     border-radius: 20px;
 }
 .socials1:hover{
@@ -61,14 +57,9 @@ h1 {
     transform: scale(125%);
 }
 
-
-
-
 .socials2{
-    border:solid;
     transition: transform .1s ease-in-out;
     transform-origin: center;
-    border-color: white;
     border-radius: 20px;
 }
 .socials2:hover{
@@ -76,10 +67,8 @@ h1 {
     transform: scale(125%);
 }
 .socials2{
-    border:solid;
     transition: transform .1s ease-in-out;
     transform-origin: center;
-    border-color: white;
     border-radius: 20px;
 }
 .socials2:hover{
