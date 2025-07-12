@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | Dababy Discord Bot</title>
+    <title>Homepage | DaBaby Discord Bot</title>
     <style>
     html {
       background-color: #181a1b;
@@ -36,6 +36,35 @@
       border-bottom: 2px solid lightgrey;
       margin: 1em 0; /* optional spacing */
     }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #181a1b;
+        margin-bottom: 20px;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111111;
+    }
+
+    .active {
+        background-color: #ffffff;
+        color: black;
+    }
   </style>
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
@@ -43,6 +72,12 @@
     <link rel="manifest" href="icons/site.webmanifest">
 </head>
 <body>
+    <ul>
+        <li><a class="active" href="https://dababy.bobjoerules.com">Home</a></li>
+        <li><a href="https://discord.com/discovery/applications/836069453389234206">Add Bot</a></li>
+        <li><a href="/updates">Updates</a></li>
+        <li><a href="https://github.com/bobjoerules/DaBaby-Bot">GitHub</a></li>
+    </ul>
     <img src="images/commands.jpeg" style="width: 100%;">
 </body>
 </html>
