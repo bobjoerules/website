@@ -1,67 +1,111 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Photo Portfolio, Bobjoerules, Miles Chase">
-    <meta name="description" content="Miles Chase's photo portfolio">
-    <meta name="author" content="Bobjoerules">
-    <link rel="stylesheet" href="/style2.css">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/img/apple touch smaller.png">
-    <title>Bobjoerules | Photo Portfolio</title>
-    <style>
-        .images img {
-            display: inline-block;
-            width: auto;
-            height: 250px;
-            cursor: zoom-in;
-        }
-        #overlayImg{
-            cursor: zoom-out;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Photo Portfolio, Bobjoerules, Miles Chase" />
+  <meta name="description" content="Miles Chase's photo portfolio" />
+  <meta name="author" content="Bobjoerules" />
+  <link rel="stylesheet" href="/style2.css" />
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple touch smaller.png" />
+  <title>Bobjoerules | Photo Portfolio</title>
 </head>
 <body style="background-color:black;">
-    <ul class="menubar" style="list-style-type: none; text-align: center;" >
-        <li><a href="/">⛺︎</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a class="active"  href="/photo-portfolio">Photos</a></li>
-        <li><a href="/renders">3d Renders</a></li>
-    </ul>
-    <p class="title" style="text-align: center; margin-bottom: 35px;">Photo Portfolio</p>
-    <div class="images" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
-        <img src="/photo-portfolio/xxx.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Waves Of Rocks.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Tracks For Miles.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Theater Hall.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Swirls.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Stop.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Stairs.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Track Switch.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/IMAX.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Flowers.png" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Computer City.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Box Of Graffiti.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Blue Line.jpg" onclick="enlargeImage(this)">
-        <img  src="/photo-portfolio/Max to Hillsboro.jpg" onclick="enlargeImage(this)">
-    </div>
-    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeOverlay()">
-        <img id="overlayImg" style="max-width:90vw; max-height:90vh;">
-    </div>
-    <script src="main.js"></script>
-    <script>
-        function enlargeImage(img) {
-            const overlay = document.getElementById("overlay");
-            const overlayImg = document.getElementById("overlayImg");
-            overlayImg.src = img.src;
-            overlay.style.display = "flex";
-        }
+  <ul class="menubar" style="list-style-type: none; text-align: center;">
+    <li><a href="/">⛺︎</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a class="active" href="/photo-portfolio">Photos</a></li>
+    <li><a href="/renders">3d Renders</a></li>
+  </ul>
 
-        function closeOverlay() {
-            document.getElementById("overlay").style.display = "none";
-        }
-</script>
+  <p class="title" style="text-align: center; margin-bottom: 35px;">Photo Portfolio</p>
+
+  <div class="images" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/xxx.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/xxx.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Waves Of Rocks.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Waves Of Rocks.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Tracks For Miles.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Tracks For Miles.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Theater Hall.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Theater Hall.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Swirls.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Swirls.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Stop.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Stop.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Stairs.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Stairs.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Track Switch.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Track Switch.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/IMAX.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/IMAX.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Flowers.png" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Flowers.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Computer City.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Computer City.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Box Of Graffiti.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Box Of Graffiti.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Blue Line.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Blue Line.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Max to Hillsboro.jpg" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Max to Hillsboro.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+  </div>
+
+  <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeOverlay()">
+    <img id="overlayImg" style="max-width:90vw; max-height:90vh;" />
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    function enlargeImage(img) {
+      const overlay = document.getElementById("overlay");
+      const overlayImg = document.getElementById("overlayImg");
+      overlayImg.src = img.src;
+      overlay.style.display = "flex";
+    }
+
+    function closeOverlay() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    function fadeIn(img) {
+      img.style.opacity = '1';
+    }
+  </script>
 </body>
 </html>
