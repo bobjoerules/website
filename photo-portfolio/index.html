@@ -12,10 +12,10 @@
     <link rel="apple-touch-icon" href="/img/apple touch smaller.png">
     <title>Bobjoerules | Photo Portfolio</title>
     <style>
-        img {
+        .images img {
             display: inline-block;
-            max-width: 25vw;
-            max-height: 25vh;
+            width: auto;
+            height: 250px;
             cursor: zoom-in;
         }
         #overlayImg{
@@ -24,28 +24,28 @@
     </style>
 </head>
 <body style="background-color:black;">
-    <ul style="list-style-type: none; text-align: center;" >
-        <li><a style="text-align: center; font-size: 20px;" href="/">⛺︎</a></li>
-        <li><a style="text-align: center; font-size: 20px;" href="/projects">Projects</a></li>
-        <li><a class="active" style="text-align: center; font-size: 20px;" href="/photo-portfolio">Photos</a></li>
-        <li><a style="text-align: center; font-size: 20px;" href="/renders">3d Renders</a></li>
+    <ul class="menubar" style="list-style-type: none; text-align: center;" >
+        <li><a href="/">⛺︎</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a class="active"  href="/photo-portfolio">Photos</a></li>
+        <li><a href="/renders">3d Renders</a></li>
     </ul>
-    <p style="text-align: center; font-size: 100px; margin-bottom: 35px;">Photo Portfolio</p>
-    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <p class="title" style="text-align: center; margin-bottom: 35px;">Photo Portfolio</p>
+    <div class="images" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
         <img src="/photo-portfolio/xxx.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Waves Of Rocks.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Tracks For Miles.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Theater Hall.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Swirls.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Stop.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Stairs.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Track Switch.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/IMAX.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Flowers.png" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Computer City.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Box Of Graffiti.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Blue Line.jpg" onclick="enlargeImage(this)">
-        <img socials src="/photo-portfolio/Max to Hillsboro.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Waves Of Rocks.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Tracks For Miles.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Theater Hall.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Swirls.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Stop.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Stairs.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Track Switch.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/IMAX.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Flowers.png" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Computer City.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Box Of Graffiti.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Blue Line.jpg" onclick="enlargeImage(this)">
+        <img  src="/photo-portfolio/Max to Hillsboro.jpg" onclick="enlargeImage(this)">
     </div>
     <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeOverlay()">
         <img id="overlayImg" style="max-width:90vw; max-height:90vh;">
