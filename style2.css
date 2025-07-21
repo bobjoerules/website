@@ -114,6 +114,11 @@ ul{
   z-index: 9999;
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
 
 @media (max-width: 720px) {
     .title{
