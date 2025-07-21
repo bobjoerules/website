@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Photo Portfolio, Bobjoerules, Miles Chase">
+    <meta name="description" content="Miles Chase's photo portfolio">
+    <meta name="author" content="Bobjoerules">
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/apple touch smaller.png">
+    <title>Bobjoerules | Photo Portfolio</title>
+    <style>
+        img {
+            display: inline-block;
+            max-width: 25vw;
+            max-height: 25vh;
+        }
+    </style>
+</head>
+<body style="background-color:black;">
+    <ul style="list-style-type: none; text-align: center;" >
+        <li><a style="text-align: center; font-size: 20px;" href="/">⛺︎</a></li>
+        <li><a style="text-align: center; font-size: 20px;" href="/projects">Projects</a></li>
+        <li><a class="active" style="text-align: center; font-size: 20px;" href="/photo-portfolio">Photos</a></li>
+        <li><a style="text-align: center; font-size: 20px;" href="/renders">3d Renders</a></li>
+    </ul>
+    <p style="text-align: center; font-size: 100px; margin-bottom: 35px;">Photo Portfolio</p>
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <img src="/photo-portfolio/xxx.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Waves Of Rocks.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Tracks For Miles.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Theater Hall.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Swirls.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Stop.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Stairs.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Track Switch.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/IMAX.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Flowers.png" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Computer City.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Box Of Graffiti.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Blue Line.jpg" onclick="enlargeImage(this)">
+        <img socials src="/photo-portfolio/Max to Hillsboro.jpg" onclick="enlargeImage(this)">
+    </div>
+    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeOverlay()">
+        <img id="overlayImg" style="max-width:90vw; max-height:90vh;">
+    </div>
+    <script src="main.js"></script>
+    <script>
+        function enlargeImage(img) {
+            const overlay = document.getElementById("overlay");
+            const overlayImg = document.getElementById("overlayImg");
+            overlayImg.src = img.src;
+            overlay.style.display = "flex";
+        }
+
+        function closeOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+</script>
+</body>
+</html>

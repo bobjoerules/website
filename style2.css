@@ -1,79 +1,62 @@
+
+@font-face {
+ font-family: 'Rubik';
+ src: url(Rubik-VariableFont_wght.ttf) format('truetype');
+ font-weight: 100 900;
+}
 .social-icons {
-    white-space: nowrap;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    padding-top: 80px;
-    z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 700px;
+  z-index: 10;
 }
-.social-icons2 {
-    white-space: nowrap;
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    transform: translate(-10%, -10%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-    padding-top: 50px;
-    z-index: 0;
+.socials:hover{
+    filter: blur(1px);
+    transform: scale(125%);
+}
+.socials{
+    border: none;
+    transition: transform .1s ease-in-out;
+    transform-origin: center;
+}
+.socials:hover{
+    filter: blur(1px);
+    transform: scale(125%);
 }
 
-h1 {
-    font-family: Dosis, Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 50px;
+p {
+    font-weight: 500;
+    color: #666666;
+}
+li {
+    display: inline;
+    padding: 10px;
+}
+.active {
+    color: #888888;
     text-decoration: underline;
-    text-align: center;
-    width: 100%;
+}
+a {
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: #222222;
 }
 
-.socials1{
-    transition: transform .1s ease-in-out;
-    transform-origin: center;
-    border-radius: 20px;
-}
-.socials1:hover{
-    filter: blur(1px);
-    transform: scale(125%);
-}
-.socials1{
-    border: none;
-    transition: transform .1s ease-in-out;
-    transform-origin: center;
-    border-radius: 20px;
-}
-.socials1:hover{
-    filter: blur(1px);
-    transform: scale(125%);
+a:hover{
+    color: #888888;
+    text-decoration-color: #888888;
 }
 
-.socials2{
-    transition: transform .1s ease-in-out;
-    transform-origin: center;
-    border-radius: 20px;
-}
-.socials2:hover{
-    filter: blur(1px);
-    transform: scale(125%);
-}
-.socials2{
-    border: none;
-    transition: transform .1s ease-in-out;
-    transform-origin: center;
-    border-radius: 20px;
-}
-.socials2:hover{
-    filter: blur(1px);
-    transform: scale(125%);
-}
+        html, body{
+            color: #666666;
+            font-family: Rubik, Verdana, Geneva, Tahoma, sans-serif;
+            background: radial-gradient(circle at 76% 26%, #171717 0, #111111 57%, #111111 100%);
+        }
