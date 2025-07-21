@@ -37,6 +37,7 @@ li {
 .active {
     color: #888888;
     text-decoration: underline;
+    text-decoration-color: #888888;
 }
 a {
     color: #666666;
