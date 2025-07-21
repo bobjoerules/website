@@ -13,6 +13,7 @@
   <title>Bobjoerules | 3D Renders</title>
 </head>
 <body style="background-color:black;">
+
   <ul class="menubar" style="list-style-type: none; text-align: center;">
     <li><a href="/">⛺︎</a></li>
     <li><a href="/projects">Projects</a></li>
@@ -34,21 +35,5 @@
   </div>
 
   <script src="main.js"></script>
-  <script>
-    function enlargeImage(img) {
-      const overlay = document.getElementById("overlay");
-      const overlayImg = document.getElementById("overlayImg");
-      overlayImg.src = img.src;
-      overlay.style.display = "flex";
-    }
-
-    function closeOverlay() {
-      document.getElementById("overlay").style.display = "none";
-    }
-
-    function fadeIn(img) {
-      img.style.opacity = '1';
-    }
-  </script>
 </body>
 </html>

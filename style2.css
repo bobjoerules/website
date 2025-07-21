@@ -3,6 +3,7 @@
  src: url(Rubik-VariableFont_wght.ttf) format('truetype');
  font-weight: 100 900;
 }
+
 .social-icons {
   display: flex;
   flex-wrap: wrap;
@@ -30,15 +31,18 @@ p {
     font-weight: 500;
     color: #666666;
 }
+
 li {
     display: inline;
     padding: 10px;
 }
+
 .active {
     color: #888888;
     text-decoration: underline;
     text-decoration-color: #888888;
 }
+
 a {
     color: #666666;
     text-transform: uppercase;
@@ -71,41 +75,52 @@ html, body{
   color: #888888;
   background: transparent;
 }
+
 .title{
     font-size: 100px;
 }
+
 .menubar a {
     font-size: 20px;
 } 
+
 .test {
     text-align: center;
 }
 
-    .images img {
-      display: inline-block;
-      width: auto;
-      height: 250px;
-      cursor: zoom-in;
-      transition: opacity 0.5s ease;
-    }
-    .hi-res {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-    }
-    .low-res {
-        filter: grayscale();
-    }
-    .img-wrapper {
-      position: relative;
-      display: inline-block;
-      height: 250px;
-    }
+.images img {
+    display: inline-block;
+    width: auto;
+    height: 250px;
+    cursor: zoom-in;
+    transition: opacity 0.5s ease;
+}
 
-    #overlayImg {
-      cursor: zoom-out;
-    }
+.hi-res {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.low-res {
+    filter: grayscale();
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    height: 250px;
+}
+
+#overlayImg {
+    cursor: zoom-out;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
 @media (max-width: 720px) {
     .title{
     font-size: 50px;
@@ -122,7 +137,4 @@ html, body{
         padding-top: 25vh;
         margin-bottom: 40px; 
     }
-}
-ul{
-    padding-inline-start: 0;
 }
