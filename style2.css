@@ -56,6 +56,10 @@ html, body{
     color: #666666;
     font-family: Rubik, Verdana, Geneva, Tahoma, sans-serif;
     background: radial-gradient(circle at 76% 26%, #171717 0, #111111 57%, #111111 100%);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 ::-moz-selection {
