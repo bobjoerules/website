@@ -11,6 +11,33 @@
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/img/apple touch smaller.png" />
   <title>Bobjoerules | Photo Portfolio</title>
+  <style>
+    .images img {
+      display: inline-block;
+      width: auto;
+      height: 250px;
+      cursor: zoom-in;
+      transition: opacity 0.5s ease;
+    }
+    .hi-res {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .low-res {
+        filter: grayscale();
+    }
+    .img-wrapper {
+      position: relative;
+      display: inline-block;
+      height: 250px;
+    }
+
+    #overlayImg {
+      cursor: zoom-out;
+    }
+  </style>
 </head>
 <body style="background-color:black;">
   <ul class="menubar" style="list-style-type: none; text-align: center;">
@@ -27,18 +54,22 @@
       <img class="low-res" src="/photo-portfolio/thumbs/xxx.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/xxx.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
+
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Waves Of Rocks.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Waves Of Rocks.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
+
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Tracks For Miles.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Tracks For Miles.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
+
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Theater Hall.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Theater Hall.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
+
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Swirls.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Swirls.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
@@ -71,6 +102,7 @@
       <img class="low-res" src="/photo-portfolio/thumbs/Box Of Graffiti.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Box Of Graffiti.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
+
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Blue Line.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Blue Line.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
@@ -79,25 +111,26 @@
       <img class="low-res" src="/photo-portfolio/thumbs/Max to Hillsboro.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Max to Hillsboro.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
+
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Phone.jpg" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Phone.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
-      <img class="low-res" src="/photo-portfolio/thumbs/Apple.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Apple.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
-    </div>
-    <div class="img-wrapper">
-      <img class="low-res" src="/photo-portfolio/thumbs/Digger.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Digger.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+      <img class="low-res" src="/photo-portfolio/thumbs/Two Dollar.png" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Two Dollar.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Dog.png" onclick="enlargeImage(this)" />
       <img src="/photo-portfolio/Dog.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
-      <img class="low-res" src="/photo-portfolio/thumbs/Two Dollar.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Two Dollar.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+      <img class="low-res" src="/photo-portfolio/thumbs/Digger.png" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Digger.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
+    </div>
+    <div class="img-wrapper">
+      <img class="low-res" src="/photo-portfolio/thumbs/Apple.png" onclick="enlargeImage(this)" />
+      <img src="/photo-portfolio/Apple.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
   </div>
 
@@ -106,5 +139,21 @@
   </div>
 
   <script src="main.js"></script>
+  <script>
+    function enlargeImage(img) {
+      const overlay = document.getElementById("overlay");
+      const overlayImg = document.getElementById("overlayImg");
+      overlayImg.src = img.src;
+      overlay.style.display = "flex";
+    }
+
+    function closeOverlay() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    function fadeIn(img) {
+      img.style.opacity = '1';
+    }
+  </script>
 </body>
 </html>

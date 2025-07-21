@@ -88,31 +88,6 @@ html, body{
     text-align: center;
 }
 
-.images img {
-    display: inline-block;
-    width: auto;
-    height: 250px;
-    cursor: zoom-in;
-    transition: opacity 0.5s ease;
-}
-
-.hi-res {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.low-res {
-    filter: grayscale();
-}
-
-.img-wrapper {
-    position: relative;
-    display: inline-block;
-    height: 250px;
-}
-
 #overlayImg {
     cursor: zoom-out;
 }
