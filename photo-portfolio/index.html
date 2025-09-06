@@ -26,13 +26,19 @@
       left: 0;
       opacity: 0;
     }
-    .low-res {
-        
-    }
+    
     .img-wrapper {
       position: relative;
       display: inline-block;
       height: 250px;
+    }
+    @media (max-width: 600px) {
+      .img-wrapper {
+        position: relative;
+        display: inline-block;
+        height: 250px;
+        max-width: fit-content;
+      }
     }
 
     #overlayImg {
