@@ -8,7 +8,3 @@ function enlargeImage(img) {
 function closeOverlay() {
     document.getElementById("overlay").style.display = "none";
 }
-
-function fadeIn(img) {
-    img.style.opacity = '1';
-}
