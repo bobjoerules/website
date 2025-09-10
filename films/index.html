@@ -17,10 +17,16 @@
             width: 480px; 
             height: 270px;
         }
-        .project {
-            border-color: #222222; border-style: solid; border-radius: 20px; cursor: pointer;
+        .film {
+            border-color: #222222;
+            border-style: solid;
+            border-radius: 20px;
+            cursor: pointer;
             min-width: 400px;
             background: rgba(0,0,0,0.1);
+        }
+        .film:hover{
+            border-color: #333333;
         }
         iframe.responsive-video {
             width: 480px;
@@ -28,12 +34,12 @@
         }
         .container {
             display: flex;
-            justify-content: center; /* centers horizontally */
-            align-items: center;     /* centers vertically if div has height */
+            justify-content: center;
+            align-items: center;
         }
         @media (max-width: 720px) {
-            .project {
-                width: 90vw; border-color: #222222; border-style: solid; border-radius: 20px; cursor: pointer;
+            .film {
+                width: 90vw;
                 min-width: 200px;
             }
         }
@@ -44,7 +50,6 @@
                 aspect-ratio: 16/9;
             }
             img {
-                display: inline-block;
                 width: 400px;
                 height: auto;
             }
@@ -61,7 +66,7 @@
     </ul>
     <p class="title" style="text-align: center; margin-bottom: 35px;">Film Projects</p>
     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <div class="project" onclick="window.open('https:\/\/youtu.be/GLZ-4MDglkE', '_blank'); return false;">
+        <div class="film" onclick="window.open('https:\/\/youtu.be/GLZ-4MDglkE', '_blank'); return false;">
             <div class="container">
                 <iframe class="responsive-video" style="padding: 10px;" width="480" height="270" src="https://www.youtube.com/embed/GLZ-4MDglkE" title="Love Without Attachment | Short Romance Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -71,7 +76,7 @@
             <p style="padding: 10px; line-height: 1.6; margin: 0px;"><span style="text-decoration: underline; font-weight: bold;">My Roles:</span> Boom Operator, Sound Mixer</p>
             <p style="padding: 10px; line-height: 1.6; margin: 0px;"><span style="text-decoration: underline; font-weight: bold;">Release Date:</span> 8/1/2025</p>
         </div>
-        <div class="project" onclick="window.open('https:\/\/youtu.be/Pl9NHZH-w7s', '_blank'); return false;">
+        <div class="film" onclick="window.open('https:\/\/youtu.be/Pl9NHZH-w7s', '_blank'); return false;">
             <div class="container">
                 <img style="padding: 10px;" src="Such An Awful Day.webp">
             </div>
