@@ -1,10 +1,25 @@
-function enlargeImage(img) {
-    const overlay = document.getElementById("overlay");
-    const overlayImg = document.getElementById("overlayImg");
-    overlayImg.src = img.src;
-    overlay.style.display = "flex";
+const nameItem = document.getElementById('name')
+let intervalId;
+let originalText = nameItem.innerText
+
+function scrambleText() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+    let scrambledText = '';
+    for (let i = 0; i < originalText.length; i++) {
+        scrambledText += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    nameItem.textContent = scrambledText;
 }
 
-function closeOverlay() {
-    document.getElementById("overlay").style.display = "none";
+function unscrambleText() {
+nameItem.textContent = originalText
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const nameItem = document.getElementById("name");
+    originalText = nameItem.innerText
+    intervalId = setInterval(() => scrambleText(), 50);
+    setTimeout(() => {
+        clearInterval(intervalId);
+        unscrambleText();
+    }, 200);
+});

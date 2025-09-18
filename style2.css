@@ -84,7 +84,7 @@ html, body{
     font-size: 20px;
 } 
 
-.test {
+.name {
     text-align: center;
 }
 
@@ -131,7 +131,7 @@ ul{
     } 
 }
 @media (min-width: 721px) {
-    .test {
+    .name {
         padding-top: 25vh;
         margin-bottom: 40px; 
     }

@@ -48,7 +48,7 @@
         <li><a href="/renders">3d Renders</a></li>
         <li><a href="/films">Films</a></li>
     </ul>
-    <p class="title" style="text-align: center; margin-bottom: 35px;">Projects</p>
+    <p class="title" id="name" style="text-align: center; margin-bottom: 35px;">Projects</p>
     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
         <div class="project" onclick="window.open('https:\/\/darkmodesites.com', '_blank'); return false;">
             <img style="padding: 10px;" src="DarkMode Sites.png">
@@ -94,7 +94,6 @@
             const p = paragraphs[paragraphs.length - 1];
             const repo = p.getAttribute("data-title");
             const span = p.querySelector("span:nth-of-type(5)");
-            console.log(repo)
 
             try {
                 const res = await fetch(
@@ -133,5 +132,6 @@
         updateCommitCounts();
 
     </script>
+    <script src="/main.js"></script>
 </body>
 </html>
