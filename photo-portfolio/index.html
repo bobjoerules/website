@@ -57,85 +57,60 @@
   <div class="images" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/xxx.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/xxx.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
-
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Waves Of Rocks.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Waves Of Rocks.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
-
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Tracks For Miles.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Tracks For Miles.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
-
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Theater Hall.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Theater Hall.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
-
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Swirls.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Swirls.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Stop.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Stop.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Stairs.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Stairs.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Track Switch.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Track Switch.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/IMAX.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/IMAX.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Flowers.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Flowers.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Computer City.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Computer City.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Box Of Graffiti.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Box Of Graffiti.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
-
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Blue Line.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Blue Line.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Max to Hillsboro.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Max to Hillsboro.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
-
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Phone.jpg" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Phone.jpg" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Two Dollar.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Two Dollar.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Dog.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Dog.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Digger.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Digger.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
     <div class="img-wrapper">
       <img class="low-res" src="/photo-portfolio/thumbs/Apple.png" onclick="enlargeImage(this)" />
-      <img src="/photo-portfolio/Apple.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
     </div>
   </div>
 
@@ -148,7 +123,8 @@
     function enlargeImage(img) {
       const overlay = document.getElementById("overlay");
       const overlayImg = document.getElementById("overlayImg");
-      overlayImg.src = img.src;
+      const filename = img.src.split('/').pop(); 
+      overlayImg.src = `/photo-portfolio/${filename}`;
       overlay.style.display = "flex";
       document.body.classList.add("no-scroll");
     }
@@ -162,5 +138,6 @@
       img.style.opacity = '1';
     }
   </script>
+  <script src="/main.js"></script>
 </body>
 </html>
