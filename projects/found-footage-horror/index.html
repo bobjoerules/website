@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Photo Portfolio, Bobjoerules, Miles Chase">
+    <meta name="description" content="Miles Chase's photo portfolio">
+    <meta name="author" content="Bobjoerules">
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/apple touch smaller.png">
+    <title>Miles Chase | Found Footage Horror</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menubar" style="list-style-type: none; text-align: center;" >
+        <li><a href="/">⛺︎</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/photo-portfolio">Photos</a></li>
+        <li><a href="/renders">3d Renders</a></li>
+        <li><a href="/films">Films</a></li>
+    </ul>
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <iframe class="responsive-video" style="padding: 10px;" width="480" height="270" src="https://youtube.com/embed/VIDEO_ID" title="October 28, 2029 | Short Found Footage Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeOverlay()">
+        <img id="overlayImg" style="max-width:90vw; max-height:90vh;">
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
