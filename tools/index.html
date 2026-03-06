@@ -10,10 +10,33 @@
     <link rel="stylesheet" href="/style2.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/img/apple touch smaller.png">
-    <title>Miles Chase | Found Footage Horror</title>
+    <title>Miles Chase | Simple Tools</title>
     <style>
-        body{
-            overflow: hidden;
+        img {
+            display: inline-block;
+            width: 25vw;
+            height: auto;
+        }
+        .project {
+            width: 25vw; 
+            border-color: #222222;
+            border-style: solid; 
+            border-radius: 20px;
+            cursor: pointer;
+            min-width: 400px;
+            background: rgba(0,0,0,0.1);
+        }
+        .project:hover{
+            border-color: #333333;
+        }
+        @media (max-width: 720px) {
+            .project {
+                width: 90vw;
+                min-width: 200px;
+            }
+            img {
+                width: 300px;
+            }
         }
     </style>
 </head>
@@ -24,10 +47,14 @@
         <li><a href="/photo-portfolio">Photos</a></li>
         <!--<li><a href="/renders">3d Renders</a></li>-->
         <li><a href="/films">Films</a></li>
-        <li><a href="/tools">Tools</a></li>
+        <li><a class="active" href="/tools">Tools</a></li>
     </ul>
+    <p class="title" id="name" style="text-align: center; margin-bottom: 35px;">Simple Tools</p>
     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <iframe class="responsive-video" style="padding: 10px;" width="960" height="540" src="https://youtube.com/embed/RsDeJhdIMX8" title="October 28, 2029 | Short Found Footage Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="project" onclick="window.open('https:\/\/wheelspinner.bobjoerules.com', '_blank'); return false;">
+            <img style="padding: 10px;" src="img/Spin Wheel.png">
+            <p style="padding: 10px; line-height: 1.6;">Spin Wheel Without Any Junk</p>
+        </div>
     </div>
     <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeOverlay()">
         <img id="overlayImg" style="max-width:90vw; max-height:90vh;">
