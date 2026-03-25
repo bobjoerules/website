@@ -22,9 +22,11 @@
   transform-origin: center;
 }
 
-.socials:hover {
-  filter: blur(1px) grayscale(50%);
-  transform: scale(1.25);
+@media (hover: hover) and (pointer: fine) {
+    .socials:hover {
+        filter: blur(1px) grayscale(50%);
+        transform: scale(1.25);
+    }
 }
 
 p {
@@ -49,11 +51,18 @@ a {
     font-weight: 400;
     text-decoration: underline;
     text-decoration-color: #222222;
+    touch-action: manipulation;
 }
 
-a:hover{
-    color: #888888;
-    text-decoration-color: #888888;
+button {
+    touch-action: manipulation;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    a:hover{
+        color: #888888;
+        text-decoration-color: #888888;
+    }
 }
 
 html, body{
@@ -83,7 +92,21 @@ html, body{
 
 .menubar a {
     font-size: 20px;
+    display: inline-block;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 } 
+
+.menubar a::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: -6px;
+    bottom: -12px;
+    left: -6px;
+    pointer-events: none;
+}
 
 .name {
     text-align: center;
