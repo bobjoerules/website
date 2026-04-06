@@ -36,7 +36,6 @@ p {
 
 li {
     display: inline;
-    padding: 10px;
 }
 
 .active {
@@ -90,23 +89,32 @@ html, body{
     font-size: 100px;
 }
 
+.menubar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.menubar li {
+    display: block;
+}
+
 .menubar a {
     font-size: 20px;
-    display: inline-block;
+    display: block;
     position: relative;
+    padding: 15px 12px;
+    margin: 0 5px;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
 } 
 
-.menubar a::before {
-    content: "";
-    position: absolute;
-    top: -12px;
-    right: -6px;
-    bottom: -12px;
-    left: -6px;
-    pointer-events: none;
-}
+
 
 .name {
     text-align: center;
