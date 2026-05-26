@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,17 +21,20 @@
       cursor: zoom-in;
       transition: opacity 0.5s ease;
     }
+
     .hi-res {
       position: absolute;
       top: 0;
       left: 0;
       opacity: 0;
     }
+
     .img-wrapper {
       position: relative;
       display: inline-block;
       height: 250px;
     }
+
     @media (max-width: 600px) {
       .img-wrapper {
         position: relative;
@@ -39,24 +43,27 @@
         max-width: 375px;
       }
     }
+
     #overlayImg {
       cursor: zoom-out;
     }
   </style>
 </head>
+
 <body>
   <ul class="menubar" style="list-style-type: none; text-align: center;">
-    <li><a href="/">⛺︎</a></li>
+    <li><a href="/">Links</a></li>
     <li><a href="/projects">Projects</a></li>
     <li><a href="/photo-portfolio">Photos</a></li>
     <!--<li><a class="active" href="/renders">3d Renders</a></li>-->
     <li><a href="/films">Films</a></li>
     <li><a href="/tools">Tools</a></li>
- </ul>
+  </ul>
 
   <p class="title" id="name" style="text-align: center; margin-bottom: 35px;">3D Renders</p>
 
-  <div class="images" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
+  <div class="images"
+    style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
     <div class="img-wrapper">
       <img class="low-res" src="/renders/thumbs/sewer.png" onclick="enlargeImage(this)" />
       <img src="/renders/sewer.png" class="hi-res" onload="fadeIn(this)" onclick="enlargeImage(this)" />
@@ -67,7 +74,7 @@
     <img id="overlayImg" style="max-width:90vw; max-height:90vh;" />
   </div>
 
-  
+
   <script>
     function enlargeImage(img) {
       const overlay = document.getElementById("overlay");
@@ -88,4 +95,5 @@
   </script>
   <script src="/main.js"></script>
 </body>
+
 </html>

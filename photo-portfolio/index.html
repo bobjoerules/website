@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,17 +21,20 @@
       cursor: zoom-in;
       transition: opacity 0.5s ease;
     }
+
     .hi-res {
       position: absolute;
       top: 0;
       left: 0;
       opacity: 0;
     }
+
     .img-wrapper {
       position: relative;
       display: inline-block;
       height: 250px;
     }
+
     @media (max-width: 600px) {
       .img-wrapper {
         position: relative;
@@ -39,14 +43,16 @@
         max-width: 375px;
       }
     }
+
     #overlayImg {
       cursor: zoom-out;
     }
   </style>
 </head>
+
 <body>
   <ul class="menubar" style="list-style-type: none; text-align: center;">
-    <li><a href="/">⛺︎</a></li>
+    <li><a href="/">Links</a></li>
     <li><a href="/projects">Projects</a></li>
     <li><a class="active" href="/photo-portfolio">Photos</a></li>
     <!--<li><a href="/renders">3d Renders</a></li>-->
@@ -55,7 +61,8 @@
   </ul>
 
   <p class="title" id="name" style="text-align: center; margin-bottom: 35px;">Photo Portfolio</p>
-  <div class="images" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
+  <div class="images"
+    style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding-left: 5vw; padding-right: 5vw;">
     <div class="img-wrapper">
       <img class="low-res" src="images/thumbs/Flower.jpeg" onclick="enlargeImage(this)" />
     </div>
@@ -120,4 +127,5 @@
   <script src="/main.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
