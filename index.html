@@ -28,10 +28,6 @@
             margin-top: 6px;
         }
 
-        #extraLinksToggle.open {
-            margin-top: 14px;
-        }
-
         #extraLinksToggle svg {
             width: 22px;
             height: 14px;
@@ -40,29 +36,41 @@
             stroke-width: 2.5;
             stroke-linecap: round;
             stroke-linejoin: round;
+            transition: transform 0.35s ease;
         }
 
         #extraLinksToggle.open svg {
             transform: rotate(180deg);
         }
 
-        .extra-links {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease, opacity 0.25s ease;
-            padding: 0;
+        .extra-links-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s ease;
         }
 
-        .extra-links.open {
-            max-height: 180px;
+        .extra-links-wrapper.open {
+            grid-template-rows: 1fr;
+        }
+
+        .extra-links-inner {
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .extra-links {
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            padding: 12px 0 12px;
+        }
+
+        .extra-links-wrapper.open .extra-links {
             opacity: 1;
-            padding: 12px 0 4px;
         }
     </style>
 </head>
 
-<body style="overflow-x: hidden;">
+<body class="links-page" style="overflow-x: hidden;">
     <ul class="menubar">
         <li><a class="active" href="/">Links</a></li>
         <li><a href="/projects">Projects</a></li>
@@ -71,60 +79,91 @@
         <li><a href="/films">Films</a></li>
         <li><a href="/tools">Tools</a></li>
     </ul>
-    <p class="title name" id="name">Miles Chase</p>
-    <div>
-        <div class="social-icons" style="position: relative;">
-            <a href="https://www.youtube.com/@bobjoerules"><img class="socials" src="/img/YouTube.png"
-                    alt="Youtube Icon" style="width:80px;height:80px;"></a>
-            <a href="https://www.youtube.com/@bobjoerulesplus"><img class="socials" src="/img/YouTube Plus.png"
-                    alt="Youtube plus Icon" style="width:80px;height:80px;"></a>
-            <a href="https://instagram.com/bobjoerules"><img class="socials" src="/img/Instagram.png"
-                    alt="Instagram Icon" style="width:80px;height:80px;"></a>
-            <a href="https://github.com/bobjoerules"><img class="socials" src="/img/GitHub.png" alt="GitHub Icon"
-                    style="width:80px;height:80px;"></a>
-            <a href="https://www.threads.com/@bobjoerules"><img class="socials" src="/img/Threads.png"
-                    alt="Threads Icon" style="width:80px;height:80px;"></a>
-            <a href="https://steamcommunity.com/id/Bobjoerules"><img class="socials" src="/img/Steam.png"
-                    alt="Steam Icon" style="width:80px;height:80px;"></a>
-            <a href="https://twitch.tv/bobjoerules"><img class="socials" src="/img/Twitch.png" alt="Twitch Icon"
-                    style="width:80px;height:80px;"></a>
-            <a href="https://letterboxd.com/bobjoerules/"><img class="socials" src="/img/Letterboxd.png"
-                    alt="Letterboxd Icon" style="width:80px;height:80px;"></a>
+    <main class="links-hero" id="linksHero">
+        <div id="linksContent" style="width: 100%;">
+            <p class="title name" id="name">Miles Chase</p>
+            <div class="social-icons" style="position: relative;">
+                <a href="https://www.youtube.com/@bobjoerules"><img class="socials" src="/img/YouTube.png"
+                        alt="Youtube Icon" style="width:80px;height:80px;"></a>
+                <a href="https://www.youtube.com/@bobjoerulesplus"><img class="socials" src="/img/YouTube Plus.png"
+                        alt="Youtube plus Icon" style="width:80px;height:80px;"></a>
+                <a href="https://instagram.com/bobjoerules"><img class="socials" src="/img/Instagram.png"
+                        alt="Instagram Icon" style="width:80px;height:80px;"></a>
+                <a href="https://github.com/bobjoerules"><img class="socials" src="/img/GitHub.png" alt="GitHub Icon"
+                        style="width:80px;height:80px;"></a>
+                <a href="https://www.threads.com/@bobjoerules"><img class="socials" src="/img/Threads.png"
+                        alt="Threads Icon" style="width:80px;height:80px;"></a>
+                <a href="https://steamcommunity.com/id/Bobjoerules"><img class="socials" src="/img/Steam.png"
+                        alt="Steam Icon" style="width:80px;height:80px;"></a>
+                <a href="https://twitch.tv/bobjoerules"><img class="socials" src="/img/Twitch.png" alt="Twitch Icon"
+                        style="width:80px;height:80px;"></a>
+                <a href="https://letterboxd.com/bobjoerules/"><img class="socials" src="/img/Letterboxd.png"
+                        alt="Letterboxd Icon" style="width:80px;height:80px;"></a>
+            </div>
+            <div id="extraLinksWrapper" class="extra-links-wrapper">
+                <div class="extra-links-inner">
+                    <div id="extraLinks" class="social-icons extra-links" aria-hidden="true">
+                        <a href="https://x.com/yobobjoerules"><img class="socials" src="/img/Twitter.png" alt="Twitter Icon"
+                                style="width:80px;height:80px;"></a>
+                        <a href="https://www.tiktok.com/@bobjoerules"><img class="socials" src="/img/TikTok.png" alt="TikTok Icon"
+                                style="width:80px;height:80px;"></a>
+                        <a href="https://reddit.com/user/bobjoerules"><img class="socials" src="/img/Reddit.png" alt="Reddit Icon"
+                                style="width:80px;height:80px;"></a>
+                        <a href="https://www.facebook.com/yobobjoerules"><img class="socials" src="/img/Facebook.png"
+                                alt="Facebook Icon" style="width:80px;height:80px;"></a>
+                        <a href="https://bsky.app/profile/bobjoerules.bsky.social"><img class="socials" src="/img/Bluesky.png"
+                                alt="Bluesky Icon" style="width:80px;height:80px;"></a>
+                        <a href="https://paypal.me/bobjoerules"><img class="socials" src="/img/PayPal.png" alt="PayPal Icon"
+                                style="width:80px;height:80px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button id="extraLinksToggle" type="button" aria-expanded="false" aria-controls="extraLinks"
+                    aria-label="Show more links">
+                    <svg viewBox="0 0 24 14" aria-hidden="true" focusable="false">
+                        <path d="M2 2 L12 12 L22 2"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div id="extraLinks" class="social-icons extra-links" aria-hidden="true">
-            <a href="https://x.com/yobobjoerules"><img class="socials" src="/img/Twitter.png" alt="Twitter Icon"
-                    style="width:80px;height:80px;"></a>
-            <a href="https://www.tiktok.com/@bobjoerules"><img class="socials" src="/img/TikTok.png" alt="TikTok Icon"
-                    style="width:80px;height:80px;"></a>
-            <a href="https://reddit.com/user/bobjoerules"><img class="socials" src="/img/Reddit.png" alt="Reddit Icon"
-                    style="width:80px;height:80px;"></a>
-            <a href="https://www.facebook.com/yobobjoerules"><img class="socials" src="/img/Facebook.png"
-                    alt="Facebook Icon" style="width:80px;height:80px;"></a>
-            <a href="https://bsky.app/profile/bobjoerules.bsky.social"><img class="socials" src="/img/Bluesky.png"
-                    alt="Bluesky Icon" style="width:80px;height:80px;"></a>
-            <a href="https://paypal.me/bobjoerules"><img class="socials" src="/img/PayPal.png" alt="PayPal Icon"
-                    style="width:80px;height:80px;"></a>
-        </div>
-        <div style="text-align: center;">
-            <button id="extraLinksToggle" type="button" aria-expanded="false" aria-controls="extraLinks"
-                aria-label="Show more links">
-                <svg viewBox="0 0 24 14" aria-hidden="true" focusable="false">
-                    <path d="M2 2 L12 12 L22 2"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
+    </main>
     <!--<footer><p style="text-align: center;">Contact At: <a href="mailto:email@bobjoerules.com" style="text-transform:none;">email@bobjoerules.com</a></p></footer>-->
     <script>
         const extraLinksToggle = document.getElementById("extraLinksToggle");
+        const extraLinksWrapper = document.getElementById("extraLinksWrapper");
         const extraLinks = document.getElementById("extraLinks");
+        const linksHero = document.getElementById("linksHero");
+        const linksContent = document.getElementById("linksContent");
+        const menubar = document.querySelector(".menubar");
 
-        if (extraLinksToggle && extraLinks) {
+        let collapsedHeight = 0;
+
+        function updateHeroSpacing() {
+            if (!linksHero || !linksContent) return;
+            if (!extraLinksWrapper || !extraLinksWrapper.classList.contains("open")) {
+                collapsedHeight = linksContent.offsetHeight;
+            }
+            const menubarHeight = menubar ? menubar.offsetHeight : 0;
+            const availableHeight = window.innerHeight - menubarHeight;
+            const topPadding = Math.max(20, Math.round((availableHeight - collapsedHeight) / 2));
+            linksHero.style.paddingTop = `${topPadding}px`;
+        }
+
+        updateHeroSpacing();
+        window.addEventListener("resize", updateHeroSpacing);
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(updateHeroSpacing);
+        }
+
+        if (extraLinksToggle && extraLinksWrapper) {
             extraLinksToggle.addEventListener("click", function () {
-                const isOpen = extraLinks.classList.toggle("open");
+                const isOpen = extraLinksWrapper.classList.toggle("open");
                 extraLinksToggle.classList.toggle("open", isOpen);
                 extraLinksToggle.setAttribute("aria-expanded", String(isOpen));
-                extraLinks.setAttribute("aria-hidden", String(!isOpen));
+                if (extraLinks) {
+                    extraLinks.setAttribute("aria-hidden", String(!isOpen));
+                }
                 extraLinksToggle.setAttribute("aria-label", isOpen ? "Hide extra links" : "Show more links");
             });
         }
